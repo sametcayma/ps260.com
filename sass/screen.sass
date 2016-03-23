@@ -1,0 +1,304 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset"
+
+$tablet-breakpoint: 830px
+$phone-breakpoint: 680px
+$min-breakpoint: 400px
+
+$background-color: #000000
+$text-color: #cccccc
+
+$nav-border-color: #775a16
+$nav-text-up-color: #ffffff
+$nav-text-down-color: #ffffff
+
+$section-title-color: #ffc300
+$section-content-coor: #c9c9c9
+
+$thumbnail-name-color: #fefefe
+
+//CLASSES
+.center
+	margin-left: auto
+	margin-right: auto
+	width: 800px
+	@media screen and (max-width: $tablet-breakpoint)
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+.left-title
+	text-align: left
+.right-title
+	text-align: right
+.email
+	position: relative
+	padding-left: 25px
+	&:hover
+		text-decoration: underline
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		background-color: gray
+		width: 20px
+		height: 20px
+.social-link
+	background: grey
+	height: 50px
+	width: 50px
+	text-indent: -9999px
+	white-space: nowrap
+	overflow: hidden
+	outline: none
+	display: inline-block
+.twitter
+.instagram
+.facebook
+
+//SITE CSS
+
+body
+	background-color: $background-color
+	color: $text-color
+	padding-left: 15px
+	padding-right: 15px
+
+img
+	display: block
+
+a
+	text-decoration: none
+	color: $text-color
+
+header
+	border-bottom: 1px solid $nav-border-color
+	margin-bottom: 20px
+	position: relative
+	.mobile-logo
+		margin-bottom: 50px
+		padding-top: 50px
+		display: none
+		@media screen and (max-width: $phone-breakpoint)
+			display: block
+		img
+			max-width: 100%
+
+	.mobile-nav-wrapper
+		background-color: $nav-border-color
+		position: absolute
+		top: 0
+		right: 0
+		padding-left: 20px
+		padding-right: 20px
+		padding-bottom: 50px
+		padding-top: 100px
+		width: 150px
+		display: none
+		@media screen and (max-width: $phone-breakpoint)
+			display: block
+		.menu-button
+			position: absolute
+			top: 10px
+			right: 10px
+			background-color: #cccccc
+			width: 31px
+			height: 31px
+		.menu
+			li
+				font-size: 25px
+				padding-bottom: 10px
+				margin-bottom: 10px
+				border-bottom: 1px solid $text-color 
+				&:last-child
+					border-bottom: none
+		.social-wrapper
+			position: absolute
+			bottom: 10px
+
+	.logo
+		margin-top: 25px
+		margin-bottom: 15px
+		@media screen and (max-width: $phone-breakpoint)
+			display: none
+		img 
+			max-width: 100%
+
+	.nav-wrapper
+		text-align: center
+		@media screen and (max-width: $phone-breakpoint)
+			display: none
+		a
+			font-style: italic
+			display: inline-block
+			padding: 8px 30px 8px 30px
+		a:link, a:visited, a:active
+			color: $nav-text-down-color
+		a:hover
+			color: $nav-text-up-color
+			background-color: $nav-border-color
+
+section
+	margin-top: 70px
+	.section-title
+		color: $section-title-color
+		border-bottom: 2px solid $section-title-color
+		margin-bottom: 50px
+		font-size: 30px
+		text-transform: uppercase
+		font-style: italic
+		@media screen and (max-width: $phone-breakpoint)
+			margin-bottom: 30px
+	.thumbnail-wrapper
+		width: 100%
+		zoom: 1
+		&:before, &:after 
+			content: ""
+			display: table
+		&:after
+			clear: both
+
+	.thumbnail
+		position: relative
+		width: 32%
+		margin-right: 2%
+		margin-bottom: 2%
+		float: left
+		filter: gray /* IE6-9 */
+		filter: grayscale(1) /* Microsoft Edge and Firefox 35+ */
+		-webkit-filter: grayscale(1) 
+		@media screen and (max-width: $phone-breakpoint)
+			width: 49%
+		&:nth-child(3n)
+			@media screen and (min-width: $phone-breakpoint)
+				margin-right: 0
+		&:nth-child(2n)
+			@media screen and (max-width: $phone-breakpoint)
+				margin-right: 0
+		img
+			max-width: 100%
+			max-height: 100%
+		.thumbnail-description
+			color: #ffffff
+			position: absolute
+			text-transform: uppercase
+			font-size: 24px
+			top: 50%
+			width: 100%
+			transform: translate(0, -50%)
+			.name
+				text-align: center
+				width: 90%
+				padding-left: 5%
+				padding-right: 5%
+
+#videos
+	img
+		max-width: 100%
+	.video-title
+		font-style: italic
+		font-size: 20px
+		margin-top: 15px
+	.editor-name
+		text-transform: uppercase
+		font-style: italic
+		font-size: 30px
+		margin-top: 15px
+		margin-bottom: 15px
+#about
+	.about-content
+		line-height: 2em
+		text-align: left
+	.about-image
+		max-width: 50%
+		float: right
+		padding-left: 50px
+		padding-bottom: 20px
+		@media screen and (max-width: $phone-breakpoint)
+			max-width: 100%
+			margin-left: auto
+			margin-right: auto
+			float: none
+			padding-left: 0
+
+#contact
+	font-size: 14px
+	zoom: 1
+	&:before, &:after 
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.contact-content
+		line-height: 2em
+		width: 20%
+		float: left
+		@media screen and (max-width: $phone-breakpoint)
+			float: none
+			width: 100%
+		.contact-name
+			font-weight: bold
+	.contact-map-wrapper
+		width: 80%
+		float: right
+		@media screen and (max-width: $phone-breakpoint)
+			float: none
+			width: 100%
+	.contact-map
+		position: relative
+		display: inline-block
+		max-width: 45%
+		margin-left: 2%
+		@media screen and (max-width: $phone-breakpoint)
+			max-width: 100%
+			margin-left: 0
+			margin-top: 15px
+			width: 100%
+		img
+			max-width: 100%
+			@media screen and (max-width: $phone-breakpoint)
+				max-width: none
+				min-width: 100%
+		.address-wrapper
+			position: absolute
+			padding-left: 30px
+			padding-top: 15px
+			padding-bottom: 17px
+			width: 90%
+			top: 20%
+			left: 0
+			background: rgba(#000000, .7)
+			@media screen and (max-width: $phone-breakpoint)
+				width: 100%
+			.city
+				color: $section-title-color
+				font-size: 20px
+				margin-bottom: 5px
+			.number
+				margin-bottom: 5px
+			.address
+				text-transform: uppercase
+
+#footer
+	margin-top: 35px
+	border-top: 2px solid white
+	padding-top: 60px
+	padding-bottom: 60px
+	position: relative
+	@media screen and (max-width: $phone-breakpoint)
+		display: none
+	img
+		margin: 0 auto
+	.social-wrapper
+		position: absolute
+		right: 0
+		text-align: right
+		top: 30px
+
+
+
+
