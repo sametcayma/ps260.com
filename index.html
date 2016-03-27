@@ -1,18 +1,25 @@
 <!doctype html>
 
 <html lang="en">
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
   <meta charset="utf-8">
 
-  <title>Catch the Feelings!</title>
+  <title>PS260 - Catch the Feelings!</title>
 
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Catch the Feeling!">
   <meta name="author" content="PS260">
 
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> 
+
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link href="//vjs.zencdn.net/5.0/video-js.min.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/5.0/video.min.js"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/ps260.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,7 +28,7 @@
 <body>
 	<header>
 		<div class="mobile-logo">
-			<img src="http://placehold.it/88x88"/>
+			<img src="assets/smalllogo.jpg"/>
 		</div>
 		<div class="mobile-nav-wrapper">
 			<div class="menu-button"></div>
@@ -31,13 +38,13 @@
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<div class="social-wrapper">
-				<a class="social-link twitter" href="#" alt="#"></a>
+				<a class="social-link twitter" href="https://www.facebook.com/ps260" alt="facbook icon"></a>
 				<a class="social-link facebook" href="#" alt="#"></a>
 				<a class="social-link instagram" href="#" alt="#"></a>
 			</div>
 		</div>
 		<div class="logo center">
-			<img src="http://placehold.it/800x106"/>
+			<img src="assets/largelogo.jpg"/>
 		</div>
 		<div class="nav-wrapper center">
 			<a href="#editors">Editors</a>
@@ -50,31 +57,14 @@
 		<section id="videos" class="center">
 			<div class="section-content">
 				<div class="video-wrapper">
-					<div id="video">
-						<img src="http://placehold.it/800x480"/>
-					</div>
+					<video id="video-player" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" 
+						controls data-setup="{}">
+					</video>
 					<p class="video-title right-title">This is a video made</p>
 					<p class="editor-name right-title">Matt Posey</p>
 				</div>
 				<div class="thumbnail-wrapper">
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
+				<!-- video thumbails for selected editor -->
 				</div>
 			</div>
 		</section>
@@ -83,42 +73,7 @@
 			<div class="section-title">Editors</div>
 			<div class="section-content">
 				<div class="thumbnail-wrapper">
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
-					<div class="thumbnail">
-						<img src="http://placehold.it/300x150"/>
-						<div class="thumbnail-description">
-							<p class="name">Matt Posey</p>
-						</div>
-					</div>
+				<!--editor thumbnails-->
 				</div>
 			</div>
 		</section>
@@ -135,29 +90,33 @@
 		  	<div class="section-title">Contact</div>
 			<div class="section-content">
 				<div class="contact-content">
-					<a class="email" href="#">greetings@ps260.com</a>
+					<a class="email" href="#">greetings@<span>ps260</span>.com</a>
 					<p class="contact-name">Zarina Mak</p>
 					<p class="contact-title">Managing Partner</p>
-					<a class="email" href="#">zarina@ps260.com</a>
+					<a class="email" href="#">zarina@<span>ps260</span>.com</a>
 					<p>REPRESENATION: Hustle</p>
 				</div>
 				<div class="contact-map-wrapper">
-					<div class="contact-map">
-						<img src="http://placehold.it/300x150" alt="Map of New York"/>
-						<div class="address-wrapper">
-							<p class="city">New York</p>
-							<p class="number">212 447 0006</p>
-							<p class="address">123 Address St.</br>New York, NY 12345</p>
+					<a href="#">
+						<div class="contact-map">
+							<img src="assets/newyork.jpg" alt="Map of New York"/>
+							<div class="address-wrapper">
+								<p class="city">New York</p>
+								<p class="number">212 447 0006</p>
+								<p class="address">260 Fifth Avenue Penthouse</br>New York, NY 10001</p>
+							</div>
 						</div>
-					</div>
-					<div class="contact-map">
-						<img src="http://placehold.it/300x150" alt="Map of Venice"/>
-						<div class="address-wrapper">
-							<p class="city">New York</p>
-							<p class="number">212 447 0006</p>
-							<p class="address">123 Address St.</br>New York, NY 12345</p>
+					</a>
+					<a href="#">
+						<div class="contact-map">
+							<img src="assets/venice.jpg" alt="Map of Venice"/>
+							<div class="address-wrapper">
+								<p class="city">Venice</p>
+								<p class="number">212 447 0006</p>
+								<p class="address">2420 Mckinley Avenue</br>Venice, CA 90291</p>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -166,10 +125,10 @@
 		<section id="footer" class="center">
 			<div class="social-wrapper">
 				<a class="social-link twitter" href="#" alt="#"></a>
-				<a class="social-link facebook" href="#" alt="#"></a>
+				<a class="social-link facebook" href="https://www.facebook.com/ps260" alt="facebook icon"></a>
 				<a class="social-link instagram" href="#" alt="#"></a>
 			</div>
-			<img src="http://placehold.it/88x88">
+			<img src="assets/smalllogo.jpg">
 		</section>
 	</footer>
 </body>

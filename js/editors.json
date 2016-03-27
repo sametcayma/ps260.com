@@ -1,0 +1,308 @@
+{
+"type": "directory",
+"name": "Editors",
+"children": [{
+	"type": "directory",
+	"name": "Adam Epstein",
+	"children": 	[{
+		"type": "file",
+		"name": "SNL \"The Day Beyonc   Turned Black\" - Dir. Rhys Thomas",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/88/64788/SNL_TheDayBeyonce_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/88/xxl_14586786158557.jpg"
+		},{
+		"type": "file",
+		"name": "Beats by Dr. Dre \"Fish Tank\" - Dir. Bryan Buckley",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/94/64794/_30_Fish_Tank_Active.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/94/xxl_14586786168568.jpg"
+		},{
+		"type": "file",
+		"name": "SNL \"Lincoln Jim Carrey\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/92/64792/SNL_Lincoln_Jim_Carrey_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/92/xxl_14586786158090.jpg"
+		},{
+		"type": "file",
+		"name": "Sandy Passage \"Wasn't She Beautiful\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/93/64793/Sandy_Passage_-_Wasn_t_She_Beautiful.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/93/xxl_14586786155603.jpg"
+		},{
+		"type": "file",
+		"name": "SNL \"American Express\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/91/64791/SNL_American_Express.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/91/xxl_14586786157270.jpg"
+		},{
+		"type": "file",
+		"name": "SNL \"Wes Anderson\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/89/64789/SNL_Wes_Anderson.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/89/xxl_14586786158126.jpg"
+		},{
+		"type": "file",
+		"name": "  Excerpt from Feature Film \"Staten Island Summer\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/90/64790/SIS_-_The_First_Time.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/90/xxl_14586786156761.jpg"
+		},{
+		"type": "file",
+		"name": "SNL \"Hobbit Office\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/87/64787/SNL_Hobbit_Office.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/87/xxl_14586786158084.jpg"
+		},{
+		"type": "file",
+		"name": "SNL \"Louis CK Lincoln\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/47/86/64786/SNL_Louis_CK_Lincoln.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/47/86/xxl_14586786155110.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "Alex Hagon",
+	"children": 	[{
+		"type": "file",
+		"name": "3 Mobile \"Perfect Surprise\"- Dir. Tomas Jonsgarden",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/5/64805/Three_Perfect_Surprise_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/05/xxl_14586789157835.jpg"
+		},{
+		"type": "file",
+		"name": "BlackBerry \"Alicia Keys, Keep Moving\" - Dir. Marcus Svanberg",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/7/64807/AK_Doc4_Dir_Edit_REVISED_END_1280x720__1_.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/07/xxl_14586789157226.jpg"
+		},{
+		"type": "file",
+		"name": "Google \"Babushka\" - Dir. Drake Doremus",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/11/64811/BABUSHKA_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/11/xxl_14586789166914.jpg"
+		},{
+		"type": "file",
+		"name": "Ericsson \"Whisper\" - Dir. Mikael Marcimain",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/9/64809/Ericsson_Whispers_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/09/xxl_14586789165799.jpg"
+		},{
+		"type": "file",
+		"name": "AMEX \"Barber\" - Dir. Ken Arlidge",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/6/64806/Barber-HD_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/06/xxl_14586789156877.jpg"
+		},{
+		"type": "file",
+		"name": "Qatar \"Holiday\" - Dir. Agustin Alberdiv",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/13/64813/Qatar_Airways_The_FCB_Holiday_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/13/xxl_14586789166387.jpg"
+		},{
+		"type": "file",
+		"name": "Giff Gaff \"Don't Be Scared\" - Dir. Matthias Hoene",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/10/64810/Giff_Gaff_Zombies_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/10/xxl_14586789164770.jpg"
+		},{
+		"type": "file",
+		"name": "Zurich \"Wedding\" - Dir. Agustin Alberdi",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/14/64814/Zurich_Wedding.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/14/xxl_14586789165618.jpg"
+		},{
+		"type": "file",
+		"name": "Carlsberg \"Crate Escape\" - Dir. Peter Lydon",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/8/64808/CARLSBERG_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/08/xxl_14586789157555.jpg"
+		},{
+		"type": "file",
+		"name": "Orangina \"Shake It to Wake It - Dir. Vesa Manninen",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/12/64812/Shake_It_To_Wake_It-HD_1.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/12/xxl_14586789167342.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "Dustin Stephens",
+	"children": 	[{
+		"type": "file",
+		"name": "1800 Tequila \"Local Flavor\" - Dir. Anthony Mandler",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/40/65040/1800_Tequila__Local_Flavor__-_Dir._Anthony_Mandler.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/40/xxl_14587674388918.jpg"
+		},{
+		"type": "file",
+		"name": "Fox Sports \"Barbershop\" - Dir. Rosey",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/41/65041/Fox_Sports__Barbershop__-_Dir._Rosey.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/41/xxl_14587674385634.jpg"
+		},{
+		"type": "file",
+		"name": "AT&amp;T \"Hand Me Down\" - Dir. Hank Perlman",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/44/65044/AT_T__Hand_Me_Down__-_Dir._Hank_Perlman.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/44/xxl_14587674387029.jpg"
+		},{
+		"type": "file",
+		"name": "M&amp;M's \"Fans\" - Dir.Theodore Melfi",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/48/65048/M_M_s__Fans__-_Dir.Theodore_Melfi.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/48/xxl_14587674398087.jpg"
+		},{
+		"type": "file",
+		"name": "Canada Dry \"BBQ\" - Dir. TWiN",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/46/65046/Canada_Dry__BBQ__-_Dir._TWiN.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/46/xxl_14587674395305.jpg"
+		},{
+		"type": "file",
+		"name": "CABLEVISION \"Dinner\" - Dir. Mark Gilbert",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/43/65043/CABLEVISION__Dinner__-_Dir._Mark_Gilbert.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/43/xxl_14587674386478.jpg"
+		},{
+		"type": "file",
+		"name": "Milk \"Arrow\" - Dir. Cole Webley",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/47/65047/Milk__Arrow__-_Dir._Cole_Webley.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/47/xxl_14587674394411.jpg"
+		},{
+		"type": "file",
+		"name": "NEFCU \"Heart\" - Dir. Greg Bell",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/45/65045/NEFCU__Heart__-_Dir._Greg_Bell.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/45/xxl_14587674386433.jpg"
+		},{
+		"type": "file",
+		"name": "Duracell \"DPM\" - Dir. Anthony Mandler",
+		"url": "https://www.interdubs.com/r/ps260/filfo/50/42/65042/Duracell__DPM__-_Dir._Anthony_Mandler.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/50/42/xxl_14587674384930.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "JJ Lask",
+	"children": 	[{
+		"type": "file",
+		"name": "Yahoo \"Engagement\" - Dir. Fr  d  ric Planchon",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/35/64835/Yahoo__Engagement__-_Dir._Fr__d__ric_Planchon.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/35/xxl_14586844345987.jpg"
+		},{
+		"type": "file",
+		"name": "Beats by Dr. Dre \"Teaser\" - Dir. Bryan Buckley",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/38/64838/Beats_by_Dr._Dre__Teaser__-_Dir._Bryan_Buckley.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/38/xxl_14586844435198.jpg"
+		},{
+		"type": "file",
+		"name": "M&amp;amp;Ms \"Delivery\" - Dir. Traktor",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/34/64834/M_amp_Ms__Delivery__-_Dir._Traktor.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/34/xxl_14586844315347.jpg"
+		},{
+		"type": "file",
+		"name": "Three Olives \"Silver\" - Dir. Anthony Mandler",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/39/64839/Three_Olives__Silver__-_Dir._Anthony_Mandler.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/39/xxl_14586844558787.jpg"
+		},{
+		"type": "file",
+		"name": "jetBlue \"Air on the Side of Humanity\" - Dir. Hank Perlman",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/33/64833/jetBlue__Air_on_the_Side_of_Humanity__-_Dir._Hank_Perlman.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/33/xxl_14586844287959.jpg"
+		},{
+		"type": "file",
+		"name": "AT&amp;amp;T \"Hello\" - Dir. Henry Alex Rubin",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/36/64836/AT_amp_T__Hello__-_Dir._Henry_Alex_Rubin.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/36/xxl_14586845868492.jpg"
+		},{
+		"type": "file",
+		"name": "Microsoft Outlook \"Hovercraft\" - Dir. Malcom Venville",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/37/64837/Microsoft_Outlook__Hovercraft__-_Dir._Malcom_Venville.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/37/xxl_14586846088918.jpg"
+		},{
+		"type": "file",
+		"name": "Google Nexus 7 \"Urban Aquatic\" - Dir. Fr  d  ric Planchon",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/32/64832/Google_Nexus_7__Urban_Aquatic__-_Dir._Fr__d__ric_Planchon.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/32/xxl_14586845365271.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "John Zieman",
+	"children": 	[{
+		"type": "file",
+		"name": "Chevron \"Doers\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/21/64821/CHEVRON_Doers_60.mov",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/21/xxl_14586816996803.jpg"
+		},{
+		"type": "file",
+		"name": "United Airlines \"Pecan\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/24/64824/UnitedBloomberg_60_1920.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/24/xxl_14586816997082.jpg"
+		},{
+		"type": "file",
+		"name": "Nivea \"Extended Moisture\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/23/64823/ExtendedMoistureReEditNonNew_30_NNVA2213H_HD.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/23/xxl_14586816997087.jpg"
+		},{
+		"type": "file",
+		"name": "Home Goods \"Growing Table\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/22/64822/Growing_Table_30_DirectorCut.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/22/xxl_14586816994515.jpg"
+		},{
+		"type": "file",
+		"name": "AXE \"Matte Effect\"",
+		"url": "https://www.interdubs.com/r/ps260/filfo/48/20/64820/AXE_Short_Ver_REV_FINAL.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/48/20/xxl_14586816996422.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "Matt Posey",
+	"children": 	[{
+		}]
+	},{
+	"type": "directory",
+	"name": "Maury Loeb",
+	"children": 	[{
+		"type": "file",
+		"name": "Acura \"My Way\" - Dir. Nicolai Fuglsig",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/83/64983/HACN4090000H.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/83/xxl_14587610347617.jpg"
+		},{
+		"type": "file",
+		"name": "Norton \"Newphoria\"  - Dir. Brian Beletic",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/89/64989/Newphoria.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/89/xxl_14587611154471.jpg"
+		},{
+		"type": "file",
+		"name": "M&amp;amp;M's \"Eating in Bed\" - Dir. Bennett Miller",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/88/64988/MZPP0423000H_MMs_EatingInBed_US_HD_30_prores_slated.mov.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/88/xxl_14587610357918.jpg"
+		},{
+		"type": "file",
+		"name": "Google \"Bohemian\" - Dir. Matt Aselton",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/86/64986/GGLL0082000H_-_Bohemian_30_4G___No_Samsung-Apple_ProRes_422__HQ_.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/86/xxl_14587610347324.jpg"
+		},{
+		"type": "file",
+		"name": "Hummer \"The Open\" - Dir. Steve Rogers",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/87/64987/Hummer_TheOpen.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/87/xxl_14587610356037.jpg"
+		},{
+		"type": "file",
+		"name": "Bacardi \"Eras\" - Dir. Armando Bo",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/85/64985/BacardiMojito_Eras_60_XIBA0002000H_HD.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/85/xxl_14587610345718.jpg"
+		},{
+		"type": "file",
+		"name": "Adidas \"Unstoppable\" - Dir. Brian Beletic",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/84/64984/adidas_unstopable_23.mov.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/84/xxl_14587610344143.jpg"
+		}]
+	},{
+	"type": "directory",
+	"name": "Ned Borgman",
+	"children": 	[{
+		"type": "file",
+		"name": "Google Nexus 7 \"Camping\" - Dir. Fr  d  ric Planchon",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/31/64931/Google_Nexus_7__Camping__-_Dir._Fr__d__ric_Planchon.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/31/xxl_14587566565315.jpg"
+		},{
+		"type": "file",
+		"name": "AT&amp;amp;T \"Data Rich\" - Dir. Matt Lenski",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/34/64934/AT_amp_T__Data_Rich__-_Dir._Matt_Lenski.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/34/xxl_14587566578649.jpg"
+		},{
+		"type": "file",
+		"name": "Google \"New Baby\" - Dir. Malcom Venville",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/32/64932/Google__New_Baby__-_Dir._Malcom_Venville.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/32/xxl_14587566564740.jpg"
+		},{
+		"type": "file",
+		"name": "M&amp;amp;Ms \"15 Minutes\" - Dir. Traktor",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/33/64933/M_amp_Ms__15_Minutes__-_Dir._Traktor.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/33/xxl_14587566565556.jpg"
+		},{
+		"type": "file",
+		"name": "Indeed.com Japan \"How Robots Work\" - Dir. Mackenzie Sheppard",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/36/64936/Indeed.com_Japan__How_Robots_Work__-_Dir._Mackenzie_Sheppard.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/36/xxl_14587566577226.jpg"
+		},{
+		"type": "file",
+		"name": "Google Galaxy Nexus \"Panorama\" - Dir. Matt Aselton",
+		"url": "https://www.interdubs.com/r/ps260/filfo/49/35/64935/Google_Galaxy_Nexus__Panorama__-_Dir._Matt_Aselton.mp4",
+		"icon": "https://www.interdubs.com//r/ps260/ic3/49/35/xxl_14587566577348.jpg"
+		}]
+	}]
+}

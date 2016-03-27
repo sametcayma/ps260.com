@@ -22,6 +22,10 @@ $section-content-coor: #c9c9c9
 $thumbnail-name-color: #fefefe
 
 //CLASSES
+.grayscale
+	filter: gray /* IE6-9 */
+	filter: grayscale(1) /* Microsoft Edge and Firefox 35+ */
+	-webkit-filter: grayscale(1) 
 .center
 	margin-left: auto
 	margin-right: auto
@@ -41,24 +45,32 @@ $thumbnail-name-color: #fefefe
 		text-decoration: underline
 	&::before
 		content: ""
+		background-image: url("../assets/mail.png")
+		background-repeat: no-repeat
+		background-position: 0 2px
+		background-size: 20px 15px
 		position: absolute
 		left: 0
 		top: 0
-		background-color: gray
 		width: 20px
 		height: 20px
 .social-link
-	background: grey
-	height: 50px
-	width: 50px
+	height: 30px
+	width: 30px
 	text-indent: -9999px
 	white-space: nowrap
 	overflow: hidden
 	outline: none
 	display: inline-block
+	background-size: 30px 30px
+	background-repeat: no-repeat
+	background-position: top left
 .twitter
+	background-image: url("../assets/twitter.png")
 .instagram
+	background-image: url("../assets/instagram.png")
 .facebook
+	background-image: url("../assets/facebook.png")
 
 //SITE CSS
 
@@ -74,6 +86,9 @@ img
 a
 	text-decoration: none
 	color: $text-color
+	outline: 0
+video
+	outline: 0
 
 header
 	border-bottom: 1px solid $nav-border-color
@@ -167,10 +182,10 @@ section
 		width: 32%
 		margin-right: 2%
 		margin-bottom: 2%
+		cursor: pointer
+		cursor: hand
 		float: left
-		filter: gray /* IE6-9 */
-		filter: grayscale(1) /* Microsoft Edge and Firefox 35+ */
-		-webkit-filter: grayscale(1) 
+		-webkit-transition: all 300ms
 		@media screen and (max-width: $phone-breakpoint)
 			width: 49%
 		&:nth-child(3n)
@@ -181,7 +196,8 @@ section
 				margin-right: 0
 		img
 			max-width: 100%
-			max-height: 100%
+			max-height: 144px
+			margin: 0 auto
 		.thumbnail-description
 			color: #ffffff
 			position: absolute
@@ -196,9 +212,7 @@ section
 				padding-left: 5%
 				padding-right: 5%
 
-#videos
-	img
-		max-width: 100%
+#videos	
 	.video-title
 		font-style: italic
 		font-size: 20px
@@ -209,6 +223,8 @@ section
 		font-size: 30px
 		margin-top: 15px
 		margin-bottom: 15px
+	.thumbnail-description
+		font-size: 14px !important
 #about
 	.about-content
 		line-height: 2em
@@ -269,7 +285,7 @@ section
 			padding-top: 15px
 			padding-bottom: 17px
 			width: 90%
-			top: 20%
+			top: 14%
 			left: 0
 			background: rgba(#000000, .7)
 			@media screen and (max-width: $phone-breakpoint)
