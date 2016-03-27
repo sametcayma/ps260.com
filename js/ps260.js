@@ -37,8 +37,22 @@ $(document).ready(function() {
 	var editorImages = new Object();
 
 	var isMobile = false;
+	var mobileMenuIsOpen = false;
 
+	//VIDEO JS
 	var vjs = videojs("video-player", { fluid: true});
+
+	//MOBILE MENU
+	$("#menu-button").click(function(){
+		if(mobileMenuIsOpen){
+			$(this).stop().transition({ rotate: '270deg'}, 500, 'cubic-bezier(0,0.9,0.3,1)');
+		} else {
+			$(this).stop().transition({ rotate: '-45deg'}, 500, 'cubic-bezier(0,0.9,0.3,1)');
+		}
+
+		$("#mobile-nav-wrapper").stop().fadeToggle();
+		mobileMenuIsOpen = !mobileMenuIsOpen;
+	});
 
 	$.getJSON(interdubs, function(json){
 		$.each(json.children, function(index, element){
@@ -69,9 +83,9 @@ $(document).ready(function() {
 				image = "assets/smalllogo.jpg"
 			} 
 			var $editorElement = $('<div class="thumbnail grayscale"><img src="' + image +'"/><div class="thumbnail-description"><p class="name">'+ editor +'</p></div></div>');
-			$editorElement.hide();
+			$editorElement.css({"opacity":0});
 			$editorElement.find("img").load(function(){
-				$editorElement.fadeIn();
+				$(this).parent().animate({"opacity": 1});
 			});
 			$editorElement
 				.click(function(){
@@ -94,6 +108,8 @@ $(document).ready(function() {
 
 	function handleEditorClick(name){
 
+		$("#videos").fadeIn();
+
 		var $videoContainer = $("#videos .thumbnail-wrapper");
 		$videoContainer.empty();
 
@@ -104,14 +120,14 @@ $(document).ready(function() {
 			}
 
 			var $videoElement = $('<div class="thumbnail grayscale"><img src="' + image + '"/><div class="thumbnail-description"><p class="name">' + json.name + '</p></div></div>');
-			$videoElement.hide();
+			$videoElement.css({"opacity": 0});
 			$videoElement.find("img").load(function(){
-				$videoElement.fadeIn();
+				$(this).parent().animate({"opacity": 1});
 			});
 			$videoElement
 				.click(function(){
 					$(this).removeClass("grayscale");
-					updateThumbnails($videoElement);
+					updateThumbnails($videoContainer);
 
 					$(this).addClass("selected");
 					handleVideoClick(json);
@@ -140,10 +156,10 @@ $(document).ready(function() {
 	}
 
 	function updateThumbnails(thumbnails){
-		thumbnails.each(function(){
+		thumbnails.children().each(function(){
 			$thumbnail = $(this);
 			if($thumbnail.hasClass("selected")){
-				$thumnail.removeClass("selected");
+				$thumbnail.removeClass("selected");
 				$thumbnail.addClass("grayscale");
 			}
 		});

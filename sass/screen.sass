@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset"
+@import "compass/css3/text-shadow"
 
 $tablet-breakpoint: 830px
 $phone-breakpoint: 680px
@@ -90,6 +91,17 @@ a
 video
 	outline: 0
 
+#scroll-to-top
+	background-color: #cccccc
+	width: 30px
+	height: 45px
+	position: fixed
+	bottom: 15px
+	right: 15px
+	display: none
+	@media screen and (max-width: $phone-breakpoint)
+		display: block
+
 header
 	border-bottom: 1px solid $nav-border-color
 	margin-bottom: 20px
@@ -102,27 +114,28 @@ header
 			display: block
 		img
 			max-width: 100%
-
-	.mobile-nav-wrapper
-		background-color: $nav-border-color
+	#menu-button
+		z-index: 999
+		position: absolute
+		top: 10px
+		right: 10px
+		background-color: #cccccc
+		width: 31px
+		height: 31px
+		display: none
+		@media screen and (max-width: $phone-breakpoint)
+			display: block
+	#mobile-nav-wrapper
 		position: absolute
 		top: 0
 		right: 0
+		display: none
+		background-color: $nav-border-color
 		padding-left: 20px
 		padding-right: 20px
 		padding-bottom: 50px
 		padding-top: 100px
 		width: 150px
-		display: none
-		@media screen and (max-width: $phone-breakpoint)
-			display: block
-		.menu-button
-			position: absolute
-			top: 10px
-			right: 10px
-			background-color: #cccccc
-			width: 31px
-			height: 31px
 		.menu
 			li
 				font-size: 25px
@@ -182,6 +195,7 @@ section
 		width: 32%
 		margin-right: 2%
 		margin-bottom: 2%
+		max-height: 144px
 		cursor: pointer
 		cursor: hand
 		float: left
@@ -199,6 +213,7 @@ section
 			max-height: 144px
 			margin: 0 auto
 		.thumbnail-description
+			@include text-shadow(black 0px 0px 2px)
 			color: #ffffff
 			position: absolute
 			text-transform: uppercase
@@ -206,13 +221,14 @@ section
 			top: 50%
 			width: 100%
 			transform: translate(0, -50%)
-			.name
+			p
 				text-align: center
 				width: 90%
 				padding-left: 5%
 				padding-right: 5%
 
 #videos	
+	display: none
 	.video-title
 		font-style: italic
 		font-size: 20px
@@ -277,8 +293,8 @@ section
 		img
 			max-width: 100%
 			@media screen and (max-width: $phone-breakpoint)
-				max-width: none
-				min-width: 100%
+				max-width: auto
+				min-width: auto
 		.address-wrapper
 			position: absolute
 			padding-left: 30px
