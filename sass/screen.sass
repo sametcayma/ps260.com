@@ -99,8 +99,6 @@ video
 	bottom: 15px
 	right: 15px
 	display: none
-	@media screen and (max-width: $phone-breakpoint)
-		display: block
 
 header
 	border-bottom: 1px solid $nav-border-color
@@ -297,15 +295,17 @@ section
 				min-width: auto
 		.address-wrapper
 			position: absolute
-			padding-left: 30px
 			padding-top: 15px
 			padding-bottom: 17px
-			width: 90%
-			top: 14%
+			width: 101%
+			top: 50%
+			transform: translate(0, -50%)
 			left: 0
 			background: rgba(#000000, .7)
 			@media screen and (max-width: $phone-breakpoint)
 				width: 100%
+			p
+				padding-left: 30px
 			.city
 				color: $section-title-color
 				font-size: 20px
