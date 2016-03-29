@@ -148,7 +148,6 @@ $(document).ready(function() {
 
 		$("#videos .video-title").html(json.name);
 		vjs.src({ type: "video/mp4", src: json.url});
-		vjs.play();
 	}
 
 	function updateThumbnails(thumbnails){
