@@ -30,8 +30,7 @@ large icon: xxl_<filename>
 //load video
 
 $(document).ready(function() {
-	var interdubs = "https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&iconsizeindex=7";
-	var local = "js/editors.json";
+	var interdubs = "https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&";
 
 	var editors = new Object();//editors["name", [index, video-json]]
 	var editorImages = new Object();
@@ -42,6 +41,9 @@ $(document).ready(function() {
 
 	if($(window).width() <= mobileWidth){
 		isMobile = true;
+		interdubs = interdubs + "iconsizeindex=5" //Note: Smaller thumbnails for mobile
+	} else {
+		interdubs = interdubs + "iconsizeindex=7"
 	}
 
 	//VIDEO JS
@@ -89,7 +91,7 @@ $(document).ready(function() {
 				editors[element.name] = videos;
 			} else {
 				$.each(element.children, function(index, child){
-					editorImages[child.name] = child.url;
+					editorImages[child.name] = child.icon;
 				});
 			}
 		});
@@ -104,7 +106,7 @@ $(document).ready(function() {
 		$.each(editors, function(editor, videos){
 			var image = editorImages[editor];
 			if(image == undefined){
-				image = "assets/smalllogo.jpg"
+				image = "assets/blank.jpg"
 			} 
 			var $editorElement = $('<div class="thumbnail grayscale"><img src="' + image +'"/><div class="thumbnail-description"><p class="name">'+ editor +'</p></div></div>');
 			$editorElement.css({"opacity":0});
@@ -173,6 +175,7 @@ $(document).ready(function() {
 
 
 	function handleVideoClick(json){
+		$(window).scrollTo(0, 500, {"interrupt": true});
 
 		$("#videos .video-title").html(json.name);
 		vjs.src({ type: "video/mp4", src: json.url});
