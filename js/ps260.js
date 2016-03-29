@@ -1,34 +1,3 @@
-/* 
-backend: https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&iconsizeindex=4
-output: 
-{
-"type": "directory",
-"name": "Editors",
-"children": [{
-	"type": "directory",
-	"name": "Adam Epstein",
-	"children": 	[{
-		"type": "file",
-		"name": "SNL \"The Day Beyonc   Turned Black\" - Dir. Rhys Thomas",
-		"url": "https://www.interdubs.com/r/ps260/filfo/47/88/64788/SNL_TheDayBeyonce_1.mp4",
-		"icon": "https://www.interdubs.com//r/ps260/ic3/47/88/14586786158557.jpg"
-
-large icon: xxl_<filename>
-*/
-
-//download json
-//parse json
-//show editor images
-
-//click editor image
-//clear video and thumbs
-//parse json
-//load video
-//load icons
-
-//click icon
-//load video
-
 $(document).ready(function() {
 	var interdubs = "https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&";
 
@@ -68,7 +37,7 @@ $(document).ready(function() {
 		});
 
 		$("#scroll-to-top").click(function(){
-			$(window).scrollTo(0, 500, {"interrupt": true});
+			$(window).scrollTo(0, 500, {"interrupt": !isMobile});
 		});
 
 		$(window).scroll(function(){
@@ -175,7 +144,7 @@ $(document).ready(function() {
 
 
 	function handleVideoClick(json){
-		$(window).scrollTo(0, 500, {"interrupt": true});
+		$(window).scrollTo(0, 500, {"interrupt": !isMobile});
 
 		$("#videos .video-title").html(json.name);
 		vjs.src({ type: "video/mp4", src: json.url});
