@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset"
-@import "compass/css3/text-shadow"
+@import "compass/css3/transition"
 
 $tablet-breakpoint: 1054px //1024 + 30px total margin on body
 $phone-breakpoint: 680px
@@ -23,11 +23,38 @@ $section-content-coor: #c9c9c9
 $thumbnail-name-color: #fefefe
 
 @font-face 
+	font-family: 'BradonGrotesque'
+	src: url('../assets/fonts/Brandon Grotesque-Medium.eot')
+	src: url('../assets/fonts/Brandon Grotesque-Medium?#iefix') format('embedded-opentype')
+	src: url('../assets/fonts/Brandon Grotesque-Medium.woff') format('woff')
+	src: url('../assets/fonts/Brandon Grotesque-Medium.ttf') format('truetype')
+	font-weight: bold
+	font-style: normal
+
+@font-face 
+	font-family: 'BradonGrotesqueBold'
+	src: url('../assets/fonts/Brandon Grotesque-Bold.eot')
+	src: url('../assets/fonts/Brandon Grotesque-Bold?#iefix') format('embedded-opentype')
+	src: url('../assets/fonts/Brandon Grotesque-Bold.woff') format('woff')
+	src: url('../assets/fonts/Brandon Grotesque-Bold.ttf') format('truetype')
+	font-weight: bold
+	font-style: normal
+
+@font-face 
+	font-family: 'BradonGrotesqueLight'
+	src: url('../assets/fonts/Brandon Grotesque-Lighteot')
+	src: url('../assets/fonts/Brandon Grotesque-Light?#iefix') format('embedded-opentype')
+	src: url('../assets/fonts/Brandon Grotesque-Light.woff') format('woff')
+	src: url('../assets/fonts/Brandon Grotesque-Light.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
 	font-family: 'TheanoDidotRegular'
 	src: url('../assets/fonts/TheanoDidotRegular.eot')
 	src: url('../assets/fonts/TheanoDidotRegular.eot?#iefix') format('embedded-opentype')
 	src: url('../assets/fonts/TheanoDidotRegular.woff') format('woff')
-	src: url('../assets/fonts/TheanoDidotRegular.ttf') format('truetype')
+	src: url('../assets/fonts/TheanoDidot-Regular.ttf') format('truetype')
 	src: url('../assets/fonts/TheanoDidotRegular.svg#TheanoDidotRegular') format('svg')
 	font-weight: normal
 	font-style: normal
@@ -86,7 +113,7 @@ $thumbnail-name-color: #fefefe
 //SITE CSS
 
 body
-	font-family: "Palanquin", sans-serif
+	font-family: "BradonGrotesque", sans-serif
 	background-color: $background-color
 	color: $text-color
 	margin-left: 2%
@@ -199,7 +226,7 @@ section
 		border-bottom: 1px solid $section-title-color
 		margin-bottom: 50px
 		padding-bottom: 5px
-		font-size: 30px
+		font-size: 25px
 		text-transform: uppercase
 		font-style: italic
 		@media screen and (max-width: $phone-breakpoint)
@@ -214,6 +241,7 @@ section
 			clear: both
 
 	.thumbnail
+		@include transition-duration(500ms)
 		position: relative
 		width: 32%
 		margin-right: 2%
@@ -222,8 +250,6 @@ section
 		cursor: hand
 		max-height: 184px
 		float: left
-		transition: all ls
-		-webkit-transition: all 1s
 		@media screen and (max-width: $phone-breakpoint)
 			width: 49%
 		&:nth-child(3n)
@@ -236,7 +262,6 @@ section
 			max-width: 100%
 			margin: 0 auto
 		.thumbnail-description
-			@include text-shadow(black 0px 0px 2px)
 			color: #ffffff
 			position: absolute
 			text-transform: uppercase
@@ -245,7 +270,6 @@ section
 			width: 100%
 			transform: translate(0, -50%)
 			p
-				letter-spacing: .05em
 				text-align: center
 				width: 90%
 				padding-left: 5%
@@ -254,6 +278,7 @@ section
 #editors
 	.thumbnail
 		.name
+			font-family: "BradonGrotesqueBold", sans-serif
 			font-size: 18px
 
 #videos	
@@ -271,6 +296,7 @@ section
 		color: #ffffff
 	.thumbnail
 		&::after 
+			@include transition-duration(500ms)
 			content: ""
 			position: absolute
 			width: 100% 
@@ -279,8 +305,6 @@ section
 			left: 0
 			background: rgba(0,0,0,0.2)
 			opacity: 0
-			transition: all ls
-			-webkit-transition: all 1s
 		&:hover::after
 			opacity: 1
 		.thumbnail-description
@@ -288,16 +312,26 @@ section
 			opacity: 0
 			z-index: 99
 			.brand
-				font-style: bold
+				font-family: "BradonGrotesqueBold", sans-serif
+				font-weight: bold
 				font-size: 14px
 			.title
+				font-family: "BradonGrotesqueLight", sans-serif
+				font-weight: lighter
 				font-size: 14px
 			.director
+				font-family: "BradonGrotesque", sans-serif
 				font-size: 14px
 #about
 	.about-content
 		line-height: 2em
 		text-align: left
+		zoom: 1
+		&::before, &::after 
+			content: ""
+			display: table
+		&::after
+			clear: both
 	.about-image
 		max-width: 50%
 		float: right
