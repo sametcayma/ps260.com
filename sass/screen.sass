@@ -6,7 +6,7 @@
 @import "compass/reset"
 @import "compass/css3/text-shadow"
 
-$tablet-breakpoint: 830px
+$tablet-breakpoint: 1054px //1024 + 30px total margin on body
 $phone-breakpoint: 680px
 $min-breakpoint: 400px
 
@@ -40,7 +40,7 @@ $thumbnail-name-color: #fefefe
 .center
 	margin-left: auto
 	margin-right: auto
-	width: 800px
+	width: 1024px
 	@media screen and (max-width: $tablet-breakpoint)
 		width: 100%
 		margin-left: 0
@@ -89,8 +89,8 @@ body
 	font-family: "Palanquin", sans-serif
 	background-color: $background-color
 	color: $text-color
-	padding-left: 15px
-	padding-right: 15px
+	margin-left: 2%
+	margin-right: 2%
 
 img
 	display: block
@@ -196,7 +196,7 @@ section
 		font-family: "TheanoDidotRegular", serif
 		letter-spacing: .025em		
 		color: $section-title-color
-		border-bottom: 2px solid $section-title-color
+		border-bottom: 1px solid $section-title-color
 		margin-bottom: 50px
 		padding-bottom: 5px
 		font-size: 30px
@@ -207,10 +207,10 @@ section
 	.thumbnail-wrapper
 		width: 100%
 		zoom: 1
-		&:before, &:after 
+		&::before, &::after 
 			content: ""
 			display: table
-		&:after
+		&::after
 			clear: both
 
 	.thumbnail
@@ -218,11 +218,12 @@ section
 		width: 32%
 		margin-right: 2%
 		margin-bottom: 2%
-		max-height: 144px
 		cursor: pointer
 		cursor: hand
+		max-height: 184px
 		float: left
-		-webkit-transition: all 300ms
+		transition: all ls
+		-webkit-transition: all 1s
 		@media screen and (max-width: $phone-breakpoint)
 			width: 49%
 		&:nth-child(3n)
@@ -233,7 +234,6 @@ section
 				margin-right: 0
 		img
 			max-width: 100%
-			max-height: 144px
 			margin: 0 auto
 		.thumbnail-description
 			@include text-shadow(black 0px 0px 2px)
@@ -251,21 +251,49 @@ section
 				padding-left: 5%
 				padding-right: 5%
 
+#editors
+	.thumbnail
+		.name
+			font-size: 18px
+
 #videos	
 	display: none
-	.video-title
-		font-style: italic
-		font-size: 20px
-		margin-top: 15px
 	.editor-name
 		font-family: "TheanoDidotRegular", serif
 		text-transform: uppercase
 		font-style: italic
 		font-size: 30px
 		margin-top: 15px
-		margin-bottom: 15px
-	.thumbnail-description
-		font-size: 14px !important
+		color: #7F7F7F
+	.video-title
+		font-size: 20px
+		margin-bottom: 30px
+		color: #ffffff
+	.thumbnail
+		&::after 
+			content: ""
+			position: absolute
+			width: 100% 
+			height: 100%
+			top: 0 
+			left: 0
+			background: rgba(0,0,0,0.2)
+			opacity: 0
+			transition: all ls
+			-webkit-transition: all 1s
+		&:hover::after
+			opacity: 1
+		.thumbnail-description
+			top: 60%
+			opacity: 0
+			z-index: 99
+			.brand
+				font-style: bold
+				font-size: 14px
+			.title
+				font-size: 14px
+			.director
+				font-size: 14px
 #about
 	.about-content
 		line-height: 2em
@@ -285,10 +313,10 @@ section
 #contact
 	font-size: 14px
 	zoom: 1
-	&:before, &:after 
+	&::before, &::after 
 		content: ""
 		display: table
-	&:after
+	&::after
 		clear: both
 	.section-title
 		margin-bottom: 30px
@@ -336,6 +364,14 @@ section
 			text-align: left
 			left: 0
 			background: rgba(#000000, .7)
+			&::after
+				content: ""
+				height: 100%
+				width: 15px
+				background-color: rgba(0, 0, 0, 0.7)
+				position: absolute
+				top: 0
+				left: 10px
 			p
 				padding-left: 30px
 			.city
@@ -351,13 +387,14 @@ section
 
 #footer
 	margin-top: 35px
-	border-top: 2px solid white
+	border-top: 1px solid white
 	padding-top: 60px
 	padding-bottom: 60px
 	position: relative
 	@media screen and (max-width: $phone-breakpoint)
 		display: none
 	img
+		max-height: 88px
 		margin: 0 auto
 	.social-wrapper
 		position: absolute
