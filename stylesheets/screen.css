@@ -604,31 +604,32 @@ section .thumbnail .thumbnail-description p {
   /* line 383, ../sass/screen.sass */
   #contact .contact-content {
     float: none;
+    font-size: 14px;
     width: 100%;
   }
 }
-/* line 391, ../sass/screen.sass */
+/* line 392, ../sass/screen.sass */
 #contact .contact-content a, #contact .contact-content p {
   display: block;
 }
-/* line 393, ../sass/screen.sass */
+/* line 394, ../sass/screen.sass */
 #contact .contact-content .contact-name {
   font-weight: bold;
 }
-/* line 395, ../sass/screen.sass */
+/* line 396, ../sass/screen.sass */
 #contact .contact-map-wrapper {
   width: 80%;
   float: right;
   text-align: right;
 }
 @media screen and (max-width: 680px) {
-  /* line 395, ../sass/screen.sass */
+  /* line 396, ../sass/screen.sass */
   #contact .contact-map-wrapper {
     float: none;
     width: 100%;
   }
 }
-/* line 402, ../sass/screen.sass */
+/* line 403, ../sass/screen.sass */
 #contact .contact-map {
   position: relative;
   display: inline-block;
@@ -636,7 +637,7 @@ section .thumbnail .thumbnail-description p {
   margin-left: 2%;
 }
 @media screen and (max-width: 680px) {
-  /* line 402, ../sass/screen.sass */
+  /* line 403, ../sass/screen.sass */
   #contact .contact-map {
     max-width: 100%;
     margin-left: 0;
@@ -644,18 +645,18 @@ section .thumbnail .thumbnail-description p {
     width: 100%;
   }
 }
-/* line 412, ../sass/screen.sass */
+/* line 413, ../sass/screen.sass */
 #contact .contact-map img {
   max-width: 100%;
 }
 @media screen and (max-width: 680px) {
-  /* line 412, ../sass/screen.sass */
+  /* line 413, ../sass/screen.sass */
   #contact .contact-map img {
     max-width: auto;
     min-width: auto;
   }
 }
-/* line 417, ../sass/screen.sass */
+/* line 418, ../sass/screen.sass */
 #contact .contact-map .address-wrapper {
   position: absolute;
   padding-top: 15px;
@@ -667,7 +668,7 @@ section .thumbnail .thumbnail-description p {
   left: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-/* line 427, ../sass/screen.sass */
+/* line 428, ../sass/screen.sass */
 #contact .contact-map .address-wrapper::after {
   content: "";
   height: 100%;
@@ -677,11 +678,11 @@ section .thumbnail .thumbnail-description p {
   top: 0;
   left: 10px;
 }
-/* line 435, ../sass/screen.sass */
+/* line 436, ../sass/screen.sass */
 #contact .contact-map .address-wrapper p {
   padding-left: 30px;
 }
-/* line 437, ../sass/screen.sass */
+/* line 438, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .city {
   font-family: "TheanoDidotRegular", serif;
   letter-spacing: 0.025em;
@@ -689,18 +690,18 @@ section .thumbnail .thumbnail-description p {
   font-size: 16px;
   margin-bottom: 5px;
 }
-/* line 443, ../sass/screen.sass */
+/* line 444, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .number {
   font-size: 12px;
   margin-bottom: 5px;
 }
-/* line 446, ../sass/screen.sass */
+/* line 447, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .address {
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* line 450, ../sass/screen.sass */
+/* line 451, ../sass/screen.sass */
 #footer {
   margin-top: 35px;
   border-top: 1px solid white;
@@ -709,17 +710,17 @@ section .thumbnail .thumbnail-description p {
   position: relative;
 }
 @media screen and (max-width: 680px) {
-  /* line 450, ../sass/screen.sass */
+  /* line 451, ../sass/screen.sass */
   #footer {
     display: none;
   }
 }
-/* line 458, ../sass/screen.sass */
+/* line 459, ../sass/screen.sass */
 #footer img {
   max-height: 88px;
   margin: 0 auto;
 }
-/* line 461, ../sass/screen.sass */
+/* line 462, ../sass/screen.sass */
 #footer .social-wrapper {
   position: absolute;
   right: 0;
