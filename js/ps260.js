@@ -147,7 +147,11 @@ $(document).ready(function() {
 			var $editorElement = $('<div class="thumbnail grayscale" data-editor-index="' + i + '"><img src="' + image +'"/><div class="thumbnail-description"><p class="name">'+ editor +'</p></div></div>');
 			$editorElement.css({"opacity":0});
 			$editorElement.find("img").load(function(){
-				$(this).parent().animate({"opacity": 1});
+				if(!isMobile){
+					$(this).parent().animate({"opacity": 1});
+				} else {
+					$(this).parent().css({"opacity": 1});
+				}
 			});
 			$editorElement
 				.click(function(e){
@@ -203,7 +207,11 @@ $(document).ready(function() {
 			var $videoElement = $('<div class="thumbnail grayscale"><img src="' + json.icon + '"/><div class="thumbnail-description"><p class="brand">' + brand + '</p><p class="title">' + title + '</p>' + directorEle +'</div></div>');
 			$videoElement.css({"opacity": 0});
 			$videoElement.find("img").load(function(){
-				$(this).parent().animate({"opacity": 1});
+				if(!isMobile){
+					$(this).parent().animate({"opacity": 1});
+				} else {
+					$(this).parent().css({"opacity": 1});
+				}
 			});
 			$videoElement
 				.click(function(e){
