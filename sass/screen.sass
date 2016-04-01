@@ -93,6 +93,7 @@ $thumbnail-name-color: #fefefe
 		width: 20px
 		height: 20px
 .social-link
+	@include transition-duration(500ms)
 	height: 30px
 	width: 30px
 	text-indent: -9999px
@@ -103,6 +104,9 @@ $thumbnail-name-color: #fefefe
 	background-size: 30px 30px
 	background-repeat: no-repeat
 	background-position: top left
+	opacity: .8
+	&:hover
+		opacity: 1
 .twitter
 	background-image: url("../assets/twitter.png")
 .instagram
@@ -110,12 +114,27 @@ $thumbnail-name-color: #fefefe
 .facebook
 	background-image: url("../assets/facebook.png")
 
-//SITE CSS
+//SPLASH CSS
+.splash-background
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+.splash-logo
+	max-width: 100%
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 
+//MAIN CSS
 body
 	font-family: "BradonGrotesque", sans-serif
 	background-color: $background-color
 	color: $text-color
+	font-size: 12px
 	margin-left: 2%
 	margin-right: 2%
 
@@ -154,7 +173,7 @@ header
 		@media screen and (max-width: $phone-breakpoint)
 			display: block
 		img
-			max-width: 100%
+			max-width: 150px
 	#menu-button
 		z-index: 999
 		position: absolute
@@ -287,14 +306,19 @@ section
 		font-family: "TheanoDidotRegular", serif
 		text-transform: uppercase
 		font-style: italic
-		font-size: 30px
+		font-weight: lighter
+		font-size: 20px
 		margin-top: 15px
+		margin-bottom: 5px
 		color: #7F7F7F
 	.video-title
-		font-size: 20px
+		font-size: 18px
 		margin-bottom: 30px
 		color: #ffffff
 	.thumbnail
+		&.selected
+			.thumbnail-description
+				opacity: 1
 		&::after 
 			@include transition-duration(500ms)
 			content: ""
@@ -314,14 +338,16 @@ section
 			.brand
 				font-family: "BradonGrotesqueBold", sans-serif
 				font-weight: bold
-				font-size: 14px
+				font-size: 16px
+				padding-bottom: 3px
 			.title
 				font-family: "BradonGrotesqueLight", sans-serif
 				font-weight: lighter
 				font-size: 14px
+				padding-bottom: 3px
 			.director
 				font-family: "BradonGrotesque", sans-serif
-				font-size: 14px
+				font-size: 13px
 #about
 	.about-content
 		line-height: 2em
@@ -356,7 +382,7 @@ section
 		margin-bottom: 30px
 	.contact-content
 		line-height: 1.7em
-		font-size: 11px
+		font-size: 10px
 		width: 20%
 		float: left
 		@media screen and (max-width: $phone-breakpoint)
@@ -401,8 +427,8 @@ section
 			&::after
 				content: ""
 				height: 100%
-				width: 15px
-				background-color: rgba(0, 0, 0, 0.7)
+				width: 10px
+				background-color: rgba(0, 0, 0, 0.9)
 				position: absolute
 				top: 0
 				left: 10px
@@ -412,11 +438,13 @@ section
 				font-family: "TheanoDidotRegular", serif
 				letter-spacing: .025em	
 				color: $section-title-color
-				font-size: 20px
+				font-size: 16px
 				margin-bottom: 5px
 			.number
+				font-size: 12px
 				margin-bottom: 5px
 			.address
+				font-size: 12px
 				text-transform: uppercase
 
 #footer

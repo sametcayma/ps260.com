@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	var interdubs = "https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&";
+$(document).ready(function() {	
+	var interdubs = "https://www.interdubs.com/r/ps260/index.php?al=1RAeyt&json=1&allchars=1&";
 
 	var vfx;
 
@@ -184,19 +184,19 @@ $(document).ready(function() {
 		var $videoContainer = $("#videos .thumbnail-wrapper");
 		$videoContainer.empty();
 
-		$.each(editorVideos[editor], function(index, json){
+		$.each(editorVideos[editor], function(index, json){ 
+
 			var jsonName = json.name.split("\"");
 
 			var brand = jsonName[0];
 			var title = "\"" + jsonName[1] + "\"";
 			var director = jsonName[2];
 
-			if(director.toUpperCase().indexOf("DIRECTOR") < 0){
-				director = "DIRECTOR: " + director.split(".")[1];
-			}
-
 			directorEle = "";
 			if(director != undefined && director.toLowerCase().indexOf("undefined") < 0){
+				if(director.toUpperCase().indexOf("DIRECTOR") < 0){
+					director = "DIRECTOR: " + director.split(".")[1];
+				}
 				directorEle = '<p class="director">' + director + '</p>';
 			}
 
@@ -210,7 +210,6 @@ $(document).ready(function() {
 					e.preventDefault();
 
 					$(this).removeClass("grayscale");
-					$(this).find(".thumbnail-description").css({top: '50%', opacity: '1'});
 
 					updateThumbnails($videoContainer);
 
@@ -220,18 +219,24 @@ $(document).ready(function() {
 				.mouseenter(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).removeClass("grayscale");
-						$(this).find(".thumbnail-description").stop().transition({top: '-=5%', opacity: '1'});
+						$(this).find(".thumbnail-description").stop().transition({opacity: '1'});
 					}
 				})
 				.mouseleave(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).addClass("grayscale");
-						$(this).find(".thumbnail-description").stop().transition({top: '+=5%', opacity: '0'});
+						$(this).find(".thumbnail-description").stop().transition({opacity: '0'});
 					} 
 				});
 
 			$videoContainer.append($videoElement);
 		});
+
+		if(editorVideos[editor].length == 1){
+			$videoContainer.hide();
+		} else {
+			$videoContainer.show();
+		}
 
 		$("#videos").fadeIn();
 	}
@@ -240,7 +245,9 @@ $(document).ready(function() {
 	function handleVideoClick(json){
 		$(window).scrollTo(0, 500, {"interrupt": !isMobile});
 
-		$("#videos .video-title").html(json.name);
+		var brandAndTitle = json.name.split("-")[0];
+
+		$("#videos .video-title").html(brandAndTitle.toUpperCase());
 		vjs.poster(json.icon);
 		vjs.src({ type: "video/mp4", src: json.url});
 	}
