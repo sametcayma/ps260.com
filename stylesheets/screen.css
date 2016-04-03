@@ -705,7 +705,7 @@ section .thumbnail .thumbnail-description p {
 #footer {
   margin-top: 35px;
   border-top: 1px solid white;
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
   position: relative;
 }
