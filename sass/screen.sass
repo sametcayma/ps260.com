@@ -89,19 +89,19 @@ $thumbnail-name-color: #fefefe
 		background-size: 20px 15px
 		position: absolute
 		left: 0
-		top: 0
+		top: 2px
 		width: 20px
 		height: 20px
 .social-link
 	@include transition-duration(500ms)
-	height: 30px
-	width: 30px
+	height: 25px
+	width: 25px
 	text-indent: -9999px
 	white-space: nowrap
 	overflow: hidden
 	outline: none
 	display: inline-block
-	background-size: 30px 30px
+	background-size: 25px 25px
 	background-repeat: no-repeat
 	background-position: top left
 	opacity: .8
@@ -222,6 +222,7 @@ header
 
 	.nav-wrapper
 		text-align: center
+		font-size: 14px
 		@media screen and (max-width: $phone-breakpoint)
 			display: none
 		a
@@ -294,12 +295,6 @@ section
 				padding-left: 5%
 				padding-right: 5%
 
-#editors
-	.thumbnail
-		.name
-			font-family: "BradonGrotesqueBold", sans-serif
-			font-size: 18px
-
 #videos	
 	display: none
 	.editor-name
@@ -307,12 +302,13 @@ section
 		text-transform: uppercase
 		font-style: italic
 		font-weight: lighter
-		font-size: 20px
+		font-size: 22px
 		margin-top: 15px
 		margin-bottom: 5px
 		color: #7F7F7F
 	.video-title
-		font-size: 18px
+		font-weight: bold
+		font-size: 16px
 		margin-bottom: 30px
 		color: #ffffff
 	.thumbnail
@@ -332,7 +328,7 @@ section
 		&:hover::after
 			opacity: 1
 		.thumbnail-description
-			top: 60%
+			top: 50%
 			opacity: 0
 			z-index: 99
 			.brand
@@ -348,10 +344,18 @@ section
 			.director
 				font-family: "BradonGrotesque", sans-serif
 				font-size: 13px
+
+#editors
+	.thumbnail
+		.name
+			font-family: "BradonGrotesqueBold", sans-serif
+			font-size: 18px
+
 #about
 	.about-content
-		line-height: 2em
+		line-height: 1.5em
 		text-align: left
+		font-size: 14px
 		zoom: 1
 		&::before, &::after 
 			content: ""
@@ -382,7 +386,7 @@ section
 		margin-bottom: 30px
 	.contact-content
 		line-height: 1.7em
-		font-size: 10px
+		font-size: 12px
 		width: 20%
 		float: left
 		@media screen and (max-width: $phone-breakpoint)
@@ -451,7 +455,7 @@ section
 #footer
 	margin-top: 35px
 	border-top: 1px solid white
-	padding-top: 30px
+	padding-top: 54px
 	padding-bottom: 60px
 	position: relative
 	@media screen and (max-width: $phone-breakpoint)

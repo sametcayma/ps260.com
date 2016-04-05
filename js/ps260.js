@@ -13,6 +13,11 @@ $(document).ready(function() {
 
 	var scrollDuration = 800;
 
+	//FONT
+	try {
+		Typekit.load({ async: true });
+	} catch(e) {}
+
 	//EASING FOR SCROLLING
 	$.easing.easeInOutExpo = function (x, t, b, c, d) {
 		if (t==0) return b;
@@ -196,15 +201,23 @@ $(document).ready(function() {
 			var title = "\"" + jsonName[1] + "\"";
 			var director = jsonName[2];
 
+			console.log(title + " " + director);
+
+
+			titleEle = "";
+			if(title != null && title != "" && title != undefined && title.toLowerCase().indexOf("undefined") < 0){
+				titleEle = '<p class="title">' + title + '</p>';
+			}
+			
 			directorEle = "";
-			if(director != undefined && director.toLowerCase().indexOf("undefined") < 0){
+			if(director != null && director != "" && director !== undefined && director.toLowerCase().indexOf("undefined") < 0){
 				if(director.toUpperCase().indexOf("DIRECTOR") < 0){
 					director = "DIRECTOR: " + director.split(".")[1];
 				}
 				directorEle = '<p class="director">' + director + '</p>';
 			}
 
-			var $videoElement = $('<div class="thumbnail grayscale"><img src="' + json.icon + '"/><div class="thumbnail-description"><p class="brand">' + brand + '</p><p class="title">' + title + '</p>' + directorEle +'</div></div>');
+			var $videoElement = $('<div class="thumbnail grayscale"><img src="' + json.icon + '"/><div class="thumbnail-description"><p class="brand">' + brand + '</p>' + titleEle + directorEle +'</div></div>');
 			$videoElement.css({"opacity": 0});
 			$videoElement.find("img").load(function(){
 				if(!isMobile){
@@ -227,13 +240,13 @@ $(document).ready(function() {
 				.mouseenter(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).removeClass("grayscale");
-						$(this).find(".thumbnail-description").stop().transition({opacity: '1'});
+						$(this).find(".thumbnail-description").stop().animate({opacity: '1'});
 					}
 				})
 				.mouseleave(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).addClass("grayscale");
-						$(this).find(".thumbnail-description").stop().transition({opacity: '0'});
+						$(this).find(".thumbnail-description").stop().animate({opacity: '0'});
 					} 
 				});
 
