@@ -310,7 +310,7 @@ header #mobile-nav-wrapper {
 }
 /* line 194, ../sass/screen.sass */
 header #mobile-nav-wrapper .menu li {
-  font-family: "TheanoDidotRegular", serif;
+  font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   font-size: 25px;
   padding-bottom: 10px;
@@ -354,7 +354,7 @@ header .nav-wrapper {
 }
 /* line 220, ../sass/screen.sass */
 header .nav-wrapper a {
-  font-family: "TheanoDidotRegular", serif;
+  font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   font-style: italic;
   display: inline-block;
@@ -376,7 +376,7 @@ section {
 }
 /* line 234, ../sass/screen.sass */
 section .section-title {
-  font-family: "TheanoDidotRegular", serif;
+  font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   color: #ffc300;
   border-bottom: 1px solid #ffc300;
@@ -468,7 +468,7 @@ section .thumbnail .thumbnail-description p {
 }
 /* line 292, ../sass/screen.sass */
 #videos .editor-name {
-  font-family: "TheanoDidotRegular", serif;
+  font-family: "kepler-std-display", serif;
   text-transform: uppercase;
   font-style: italic;
   font-weight: lighter;
@@ -682,7 +682,7 @@ section .thumbnail .thumbnail-description p {
 }
 /* line 434, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .city {
-  font-family: "TheanoDidotRegular", serif;
+  font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   color: #ffc300;
   font-size: 16px;
