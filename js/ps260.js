@@ -36,7 +36,9 @@ $(document).ready(function() {
 	$(".splash-logo").click(function(e){
 		e.preventDefault();
 		splashHidden = true
-		$("#splash").fadeOut("slow");
+		$("#splash").transition({ opacity: 0 }, function(){
+			$("#splash").css({display: "none" });
+		});
 	});
 	
 	if(isMobile){

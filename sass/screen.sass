@@ -107,7 +107,9 @@ $thumbnail-name-color: #fefefe
 //SPLASH CSS
 #splash
 	z-index: 9999
+	-webkit-backface-visibility: hidden
 .splash-background
+	-webkit-backface-visibility: hidden
 	position: fixed
 	background-color: #000000
 	top: 0
@@ -257,6 +259,7 @@ section
 
 	.thumbnail
 		@include transition-duration(500ms)
+		-webkit-backface-visibility: hidden
 		position: relative
 		width: 32%
 		margin-right: 2%
@@ -277,6 +280,7 @@ section
 			max-width: 100%
 			margin: 0 auto
 		.thumbnail-description
+			-webkit-backface-visibility: hidden
 			color: #ffffff
 			position: absolute
 			text-transform: uppercase
@@ -309,6 +313,7 @@ section
 	.thumbnail
 		&::after 
 			@include transition-duration(500ms)
+			-webkit-backface-visibility: hidden
 			content: ""
 			position: absolute
 			width: 100% 
