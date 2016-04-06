@@ -307,9 +307,6 @@ section
 		margin-bottom: 30px
 		color: #ffffff
 	.thumbnail
-		&.selected
-			.thumbnail-description
-				opacity: 1
 		&::after 
 			@include transition-duration(500ms)
 			content: ""
@@ -319,9 +316,6 @@ section
 			top: 0 
 			left: 0
 			background: rgba(0,0,0,0.2)
-			opacity: 0
-		&:hover::after
-			opacity: 1
 		.thumbnail-description
 			top: 50%
 			z-index: 99
