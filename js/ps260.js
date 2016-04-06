@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var editorVideos = new Object();//{"name", [index, video-json]]}
 	var editorImages = new Object(); //{"name", "url"}
 
+	var splashHidden = false;
 	var isMobile = false;
 	var mobileWidth = 680; //Note: This number must match SCSS $phone-break-point
 	var mobileMenuIsOpen = false;
@@ -31,6 +32,18 @@ $(document).ready(function() {
 		return -c/2 * ((t-=2)*t*t*t - 2) + b;
 	};
 
+	//SPLASH
+	$(".splash-logo").click(function(e){
+		e.preventDefault();
+		splashHidden = true
+		$("#splash").fadeOut("slow");
+	});
+	
+	if(isMobile){
+		splashHidden = true;
+		$("#splash").hide();
+	}
+
 	//SETUP FOR CHECKING MOBILE
 	$(window).resize(function(){
 		if(mobileMenuIsOpen){
@@ -38,8 +51,14 @@ $(document).ready(function() {
 		}
 		if($(window).width() <= mobileWidth){
 			isMobile = true;
+			if(!splashHidden) {
+				$("#splash").hide();
+			}
 			interdubs = interdubs + "iconsizeindex=5" //Note: Smaller thumbnails for mobile
 		} else {
+			if(!splashHidden){		
+				$("#splash").show();
+			}
 			interdubs = interdubs + "iconsizeindex=108"
 		}
 	});
@@ -108,6 +127,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//DATA LOADING
 	$.getJSON(interdubs, function(json){
 		$.each(json.children, function(index, element){
 			if(element.name != "Key Images"){
