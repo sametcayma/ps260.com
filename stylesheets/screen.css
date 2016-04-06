@@ -315,69 +315,71 @@ header #mobile-nav-wrapper .menu li {
   font-size: 25px;
   padding-bottom: 10px;
   margin-bottom: 10px;
+  font-style: italic;
+  font-weight: bold;
   border-bottom: 1px solid #cccccc;
 }
-/* line 201, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 header #mobile-nav-wrapper .menu li:last-child {
   border-bottom: none;
 }
-/* line 203, ../sass/screen.sass */
+/* line 205, ../sass/screen.sass */
 header #mobile-nav-wrapper .social-wrapper {
   position: absolute;
   bottom: 10px;
 }
-/* line 207, ../sass/screen.sass */
+/* line 209, ../sass/screen.sass */
 header .logo {
   margin-top: 25px;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 680px) {
-  /* line 207, ../sass/screen.sass */
+  /* line 209, ../sass/screen.sass */
   header .logo {
     display: none;
   }
 }
-/* line 212, ../sass/screen.sass */
+/* line 214, ../sass/screen.sass */
 header .logo img {
   max-width: 100%;
 }
-/* line 215, ../sass/screen.sass */
+/* line 217, ../sass/screen.sass */
 header .nav-wrapper {
   text-align: center;
   font-size: 15px;
 }
 @media screen and (max-width: 680px) {
-  /* line 215, ../sass/screen.sass */
+  /* line 217, ../sass/screen.sass */
   header .nav-wrapper {
     display: none;
   }
 }
-/* line 220, ../sass/screen.sass */
+/* line 222, ../sass/screen.sass */
 header .nav-wrapper a {
   font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   font-style: italic;
+  font-weight: bold;
   display: inline-block;
   padding: 8px 40px 8px 40px;
 }
-/* line 226, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 header .nav-wrapper a:link, header .nav-wrapper a:visited, header .nav-wrapper a:active {
   color: #ffffff;
 }
-/* line 228, ../sass/screen.sass */
+/* line 231, ../sass/screen.sass */
 header .nav-wrapper a:hover {
   color: #ffffff;
   background-color: #775a16;
 }
 
-/* line 232, ../sass/screen.sass */
+/* line 235, ../sass/screen.sass */
 section {
   margin-top: 70px;
 }
-/* line 234, ../sass/screen.sass */
+/* line 237, ../sass/screen.sass */
 section .section-title {
   font-family: "kepler-std-display", serif;
-  letter-spacing: 0.025em;
   color: #ffc300;
   border-bottom: 1px solid #ffc300;
   margin-bottom: 50px;
@@ -385,28 +387,29 @@ section .section-title {
   font-size: 25px;
   text-transform: uppercase;
   font-style: italic;
+  font-weight: bold;
 }
 @media screen and (max-width: 680px) {
-  /* line 234, ../sass/screen.sass */
+  /* line 237, ../sass/screen.sass */
   section .section-title {
     margin-bottom: 30px;
   }
 }
-/* line 246, ../sass/screen.sass */
+/* line 249, ../sass/screen.sass */
 section .thumbnail-wrapper {
   width: 100%;
   zoom: 1;
 }
-/* line 249, ../sass/screen.sass */
+/* line 252, ../sass/screen.sass */
 section .thumbnail-wrapper::before, section .thumbnail-wrapper::after {
   content: "";
   display: table;
 }
-/* line 252, ../sass/screen.sass */
+/* line 255, ../sass/screen.sass */
 section .thumbnail-wrapper::after {
   clear: both;
 }
-/* line 255, ../sass/screen.sass */
+/* line 258, ../sass/screen.sass */
 section .thumbnail {
   -moz-transition-duration: 500ms;
   -o-transition-duration: 500ms;
@@ -422,29 +425,29 @@ section .thumbnail {
   float: left;
 }
 @media screen and (max-width: 680px) {
-  /* line 255, ../sass/screen.sass */
+  /* line 258, ../sass/screen.sass */
   section .thumbnail {
     width: 49%;
   }
 }
 @media screen and (min-width: 680px) {
-  /* line 267, ../sass/screen.sass */
+  /* line 270, ../sass/screen.sass */
   section .thumbnail:nth-child(3n) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 680px) {
-  /* line 270, ../sass/screen.sass */
+  /* line 273, ../sass/screen.sass */
   section .thumbnail:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 273, ../sass/screen.sass */
+/* line 276, ../sass/screen.sass */
 section .thumbnail img {
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 276, ../sass/screen.sass */
+/* line 279, ../sass/screen.sass */
 section .thumbnail .thumbnail-description {
   color: #ffffff;
   position: absolute;
@@ -454,7 +457,7 @@ section .thumbnail .thumbnail-description {
   width: 100%;
   transform: translate(0, -50%);
 }
-/* line 284, ../sass/screen.sass */
+/* line 287, ../sass/screen.sass */
 section .thumbnail .thumbnail-description p {
   text-align: center;
   width: 90%;
@@ -462,33 +465,33 @@ section .thumbnail .thumbnail-description p {
   padding-right: 5%;
 }
 
-/* line 290, ../sass/screen.sass */
+/* line 293, ../sass/screen.sass */
 #videos {
   display: none;
 }
-/* line 292, ../sass/screen.sass */
+/* line 295, ../sass/screen.sass */
 #videos .editor-name {
   font-family: "kepler-std-display", serif;
   text-transform: uppercase;
   font-style: italic;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 22px;
   margin-top: 15px;
   margin-bottom: 5px;
   color: #7F7F7F;
 }
-/* line 301, ../sass/screen.sass */
+/* line 304, ../sass/screen.sass */
 #videos .video-title {
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 30px;
   color: #ffffff;
 }
-/* line 308, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 #videos .thumbnail.selected .thumbnail-description {
   opacity: 1;
 }
-/* line 310, ../sass/screen.sass */
+/* line 313, ../sass/screen.sass */
 #videos .thumbnail::after {
   -moz-transition-duration: 500ms;
   -o-transition-duration: 500ms;
@@ -503,59 +506,59 @@ section .thumbnail .thumbnail-description p {
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
-/* line 320, ../sass/screen.sass */
+/* line 323, ../sass/screen.sass */
 #videos .thumbnail:hover::after {
   opacity: 1;
 }
-/* line 322, ../sass/screen.sass */
+/* line 325, ../sass/screen.sass */
 #videos .thumbnail .thumbnail-description {
   top: 50%;
   opacity: 0;
   z-index: 99;
 }
-/* line 326, ../sass/screen.sass */
+/* line 329, ../sass/screen.sass */
 #videos .thumbnail .thumbnail-description .brand {
   font-family: "BradonGrotesqueBold", sans-serif;
   font-weight: bold;
   font-size: 16px;
   padding-bottom: 3px;
 }
-/* line 331, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 #videos .thumbnail .thumbnail-description .title {
   font-family: "BradonGrotesqueLight", sans-serif;
   font-weight: lighter;
   font-size: 14px;
   padding-bottom: 3px;
 }
-/* line 336, ../sass/screen.sass */
+/* line 339, ../sass/screen.sass */
 #videos .thumbnail .thumbnail-description .director {
   font-family: "BradonGrotesque", sans-serif;
   font-size: 13px;
 }
 
-/* line 342, ../sass/screen.sass */
+/* line 345, ../sass/screen.sass */
 #editors .thumbnail .name {
   font-family: "BradonGrotesqueBold", sans-serif;
   font-size: 18px;
 }
 
-/* line 347, ../sass/screen.sass */
+/* line 350, ../sass/screen.sass */
 #about .about-content {
   line-height: 1.5em;
   text-align: left;
   font-size: 14px;
   zoom: 1;
 }
-/* line 352, ../sass/screen.sass */
+/* line 355, ../sass/screen.sass */
 #about .about-content::before, #about .about-content::after {
   content: "";
   display: table;
 }
-/* line 355, ../sass/screen.sass */
+/* line 358, ../sass/screen.sass */
 #about .about-content::after {
   clear: both;
 }
-/* line 357, ../sass/screen.sass */
+/* line 360, ../sass/screen.sass */
 #about .about-image {
   max-width: 50%;
   float: right;
@@ -563,7 +566,7 @@ section .thumbnail .thumbnail-description p {
   padding-bottom: 20px;
 }
 @media screen and (max-width: 680px) {
-  /* line 357, ../sass/screen.sass */
+  /* line 360, ../sass/screen.sass */
   #about .about-image {
     max-width: 100%;
     margin-left: auto;
@@ -573,25 +576,25 @@ section .thumbnail .thumbnail-description p {
   }
 }
 
-/* line 369, ../sass/screen.sass */
+/* line 372, ../sass/screen.sass */
 #contact {
   font-size: 14px;
   zoom: 1;
 }
-/* line 372, ../sass/screen.sass */
+/* line 375, ../sass/screen.sass */
 #contact::before, #contact::after {
   content: "";
   display: table;
 }
-/* line 375, ../sass/screen.sass */
+/* line 378, ../sass/screen.sass */
 #contact::after {
   clear: both;
 }
-/* line 377, ../sass/screen.sass */
+/* line 380, ../sass/screen.sass */
 #contact .section-title {
   margin-bottom: 30px;
 }
-/* line 379, ../sass/screen.sass */
+/* line 382, ../sass/screen.sass */
 #contact .contact-content {
   line-height: 1.7em;
   font-size: 12px;
@@ -599,35 +602,35 @@ section .thumbnail .thumbnail-description p {
   float: left;
 }
 @media screen and (max-width: 680px) {
-  /* line 379, ../sass/screen.sass */
+  /* line 382, ../sass/screen.sass */
   #contact .contact-content {
     float: none;
     font-size: 14px;
     width: 100%;
   }
 }
-/* line 388, ../sass/screen.sass */
+/* line 391, ../sass/screen.sass */
 #contact .contact-content a, #contact .contact-content p {
   display: block;
 }
-/* line 390, ../sass/screen.sass */
+/* line 393, ../sass/screen.sass */
 #contact .contact-content .contact-name {
   font-weight: bold;
 }
-/* line 392, ../sass/screen.sass */
+/* line 395, ../sass/screen.sass */
 #contact .contact-map-wrapper {
   width: 80%;
   float: right;
   text-align: right;
 }
 @media screen and (max-width: 680px) {
-  /* line 392, ../sass/screen.sass */
+  /* line 395, ../sass/screen.sass */
   #contact .contact-map-wrapper {
     float: none;
     width: 100%;
   }
 }
-/* line 399, ../sass/screen.sass */
+/* line 402, ../sass/screen.sass */
 #contact .contact-map {
   position: relative;
   display: inline-block;
@@ -635,7 +638,7 @@ section .thumbnail .thumbnail-description p {
   margin-left: 2%;
 }
 @media screen and (max-width: 680px) {
-  /* line 399, ../sass/screen.sass */
+  /* line 402, ../sass/screen.sass */
   #contact .contact-map {
     max-width: 100%;
     margin-left: 0;
@@ -643,18 +646,18 @@ section .thumbnail .thumbnail-description p {
     width: 100%;
   }
 }
-/* line 409, ../sass/screen.sass */
+/* line 412, ../sass/screen.sass */
 #contact .contact-map img {
   max-width: 100%;
 }
 @media screen and (max-width: 680px) {
-  /* line 409, ../sass/screen.sass */
+  /* line 412, ../sass/screen.sass */
   #contact .contact-map img {
     max-width: auto;
     min-width: auto;
   }
 }
-/* line 414, ../sass/screen.sass */
+/* line 417, ../sass/screen.sass */
 #contact .contact-map .address-wrapper {
   position: absolute;
   padding-top: 15px;
@@ -666,7 +669,7 @@ section .thumbnail .thumbnail-description p {
   left: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-/* line 424, ../sass/screen.sass */
+/* line 427, ../sass/screen.sass */
 #contact .contact-map .address-wrapper::after {
   content: "";
   height: 100%;
@@ -676,30 +679,31 @@ section .thumbnail .thumbnail-description p {
   top: 0;
   left: 10px;
 }
-/* line 432, ../sass/screen.sass */
+/* line 435, ../sass/screen.sass */
 #contact .contact-map .address-wrapper p {
   padding-left: 30px;
 }
-/* line 434, ../sass/screen.sass */
+/* line 437, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .city {
   font-family: "kepler-std-display", serif;
   letter-spacing: 0.025em;
   color: #ffc300;
   font-size: 16px;
+  font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 440, ../sass/screen.sass */
+/* line 444, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .number {
   font-size: 12px;
   margin-bottom: 5px;
 }
-/* line 443, ../sass/screen.sass */
+/* line 447, ../sass/screen.sass */
 #contact .contact-map .address-wrapper .address {
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* line 447, ../sass/screen.sass */
+/* line 451, ../sass/screen.sass */
 #footer {
   margin-top: 35px;
   border-top: 1px solid white;
@@ -708,17 +712,17 @@ section .thumbnail .thumbnail-description p {
   position: relative;
 }
 @media screen and (max-width: 680px) {
-  /* line 447, ../sass/screen.sass */
+  /* line 451, ../sass/screen.sass */
   #footer {
     display: none;
   }
 }
-/* line 455, ../sass/screen.sass */
+/* line 459, ../sass/screen.sass */
 #footer img {
   max-height: 88px;
   margin: 0 auto;
 }
-/* line 458, ../sass/screen.sass */
+/* line 462, ../sass/screen.sass */
 #footer .social-wrapper {
   position: absolute;
   right: 0;
