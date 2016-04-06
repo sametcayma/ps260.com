@@ -260,13 +260,13 @@ $(document).ready(function() {
 				.mouseenter(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).removeClass("grayscale");
-						$(this).find(".thumbnail-description").stop().animate({opacity: '1'});
+						//$(this).find(".thumbnail-description").stop().animate({opacity: '1'});
 					}
 				})
 				.mouseleave(function(){ 
 					if(!$(this).hasClass("selected")) { 
 						$(this).addClass("grayscale");
-						$(this).find(".thumbnail-description").stop().animate({opacity: '0'});
+						//$(this).find(".thumbnail-description").stop().animate({opacity: '0'});
 					} 
 				});
 
