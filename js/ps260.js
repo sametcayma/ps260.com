@@ -4,7 +4,9 @@ $(document).ready(function() {
 	var vfx;
 
 	var editors = new Array(); //[index, "name"]
+
 	var editorVideos = new Object();//{"name", [index, video-json]]}
+	var editorAdditionalVideos = new Object();//{"name", [index, video-json]]}
 	var editorImages = new Object(); //{"name", "url"}
 
 	var splashHidden = false;
@@ -129,16 +131,28 @@ $(document).ready(function() {
 		}
 	});
 
+	//BACK BUTTON RESET
+	$(window).on('hashchange', function() {
+		$('#videos').hide();
+		$(window).scrollTo(0, scrollDuration, {easing:'easeInOutQuart'});
+	});
+
 	//DATA LOADING
 	$.getJSON(interdubs, function(json){
 		$.each(json.children, function(index, element){
 			if(element.name != "Key Images"){
 				var videos = new Array();
+				var additional = new Array();
 				$.each(element.children, function(index, child){
-					videos.push(child);
+					if(child.name.toLowerCase().indexOf("*") > -1){
+						additional.push(child);
+					} else {
+						videos.push(child);
+					}
 				});
 
 				editorVideos[element.name] = videos;
+				editorAdditionalVideos[element.name] = additional;
 
 				editors.push(element.name)
 			} else {
@@ -184,6 +198,10 @@ $(document).ready(function() {
 				.click(function(e){
 					e.preventDefault();
 
+					if(window.location.href.indexOf("#") == -1){
+						history.pushState(null, null, '#');
+					}
+
 					$(this).removeClass("grayscale");
 					updateThumbnails($editorsContainer);
 
@@ -216,64 +234,24 @@ $(document).ready(function() {
 		$videoContainer.empty();
 
 		$.each(editorVideos[editor], function(index, json){ 
-
-			var jsonName = json.name.split("\"");
-
-			var brand = jsonName[0];
-			var title = "\"" + jsonName[1] + "\"";
-			var director = jsonName[2];
-
-			console.log(title + " " + director);
-
-
-			titleEle = "";
-			if(title != null && title != "" && title != undefined && title.toLowerCase().indexOf("undefined") < 0){
-				titleEle = '<p class="title">' + title + '</p>';
-			}
-			
-			directorEle = "";
-			if(director != null && director != "" && director !== undefined && director.toLowerCase().indexOf("undefined") < 0){
-				if(director.toUpperCase().indexOf("DIRECTOR") < 0){
-					director = "DIRECTOR: " + director.split(".")[1];
-				}
-				directorEle = '<p class="director">' + director + '</p>';
-			}
-
-			var $videoElement = $('<div class="thumbnail grayscale"><img src="' + json.icon + '"/><div class="thumbnail-description"><p class="brand">' + brand + '</p>' + titleEle + directorEle +'</div></div>');
-			$videoElement.css({"opacity": 0});
-			$videoElement.find("img").load(function(){
-				if(!isMobile){
-					$(this).parent().animate({"opacity": 1});
-				} else {
-					$(this).parent().css({"opacity": 1});
-				}
-			});
-			$videoElement
-				.click(function(e){
-					e.preventDefault();
-
-					$(this).removeClass("grayscale");
-
-					updateThumbnails($videoContainer);
-
-					$(this).addClass("selected");
-					handleVideoClick(json);
-				})
-				.mouseenter(function(){ 
-					if(!$(this).hasClass("selected")) { 
-						$(this).removeClass("grayscale");
-						//$(this).find(".thumbnail-description").stop().animate({opacity: '1'});
-					}
-				})
-				.mouseleave(function(){ 
-					if(!$(this).hasClass("selected")) { 
-						$(this).addClass("grayscale");
-						//$(this).find(".thumbnail-description").stop().animate({opacity: '0'});
-					} 
-				});
-
-			$videoContainer.append($videoElement);
+			parseVideoJson(json, $videoContainer);
 		});
+
+		var additionalVideos = editorAdditionalVideos[editor];
+		if(additionalVideos.length > 0){
+			var randomIndex = Math.round((additionalVideos.length - 1) * Math.random());
+			var random = additionalVideos[randomIndex];
+
+			$videoContainer.append(createVideoElement(random.icon, "Additional Videos", "", "", function(e){
+				e.preventDefault();
+
+				$(this).remove();
+
+				$.each(editorAdditionalVideos[editor], function(index, json){ 
+					parseVideoJson(json, $videoContainer);
+				});
+			}));
+		}
 
 		if(editorVideos[editor].length == 1){
 			$videoContainer.hide();
@@ -282,6 +260,72 @@ $(document).ready(function() {
 		}
 
 		$("#videos").fadeIn();
+	}
+
+	function parseVideoJson(json, container){
+		var jsonName = json.name.split("\"");
+
+		var brand = jsonName[0];
+		var title = "\"" + jsonName[1] + "\"";
+		var director = jsonName[2];
+
+		if(brand.indexOf("*") > -1){
+			brand = brand.split("*")[1];
+		}
+
+		titleEle = "";
+		if(title != null && title != "" && title != undefined && title.toLowerCase().indexOf("undefined") < 0){
+			titleEle = '<p class="title">' + title + '</p>';
+		}
+		
+		directorEle = "";
+		if(director != null && director != "" && director !== undefined && director.toLowerCase().indexOf("undefined") < 0){
+			if(director.toUpperCase().indexOf("DIRECTOR") < 0){
+				director = "DIRECTOR: " + director.split(".")[1];
+			}
+			directorEle = '<p class="director">' + director + '</p>';
+		}
+
+		container.append(createVideoElement(json.icon, brand, titleEle, directorEle, function(e){
+			e.preventDefault();
+
+			$(this).removeClass("grayscale");
+
+			updateThumbnails(container);
+
+			$(this).addClass("selected");
+			handleVideoClick(json);
+		}));
+	}
+
+	function createVideoElement(icon, brand, titleEle, directorEle, onClick){
+		var $videoElement = $('<div class="thumbnail grayscale"><img src="' + icon + '"/><div class="thumbnail-description"><p class="brand">' + brand + '</p>' + titleEle + directorEle +'</div></div>');
+
+
+		$videoElement.css({"opacity": 0});
+		$videoElement.find("img").load(function(){
+			if(!isMobile){
+				$(this).parent().animate({"opacity": 1});
+			} else {
+				$(this).parent().css({"opacity": 1});
+			}
+		});
+		$videoElement
+			.click(onClick)
+			.mouseenter(function(){ 
+				if(!$(this).hasClass("selected")) { 
+					$(this).removeClass("grayscale");
+					//$(this).find(".thumbnail-description").stop().animate({opacity: '1'});
+				}
+			})
+			.mouseleave(function(){ 
+				if(!$(this).hasClass("selected")) { 
+					$(this).addClass("grayscale");
+					//$(this).find(".thumbnail-description").stop().animate({opacity: '0'});
+				} 
+			});
+
+		return $videoElement;
 	}
 
 
