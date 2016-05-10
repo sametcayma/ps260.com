@@ -144,8 +144,10 @@ $(document).ready(function() {
 				var videos = new Array();
 				var additional = new Array();
 				$.each(element.children, function(index, child){
-					if(child.name.toLowerCase().indexOf("*") > -1){
-						additional.push(child);
+					if(child.type == "directory" && child.name.toLowerCase() == "additional"){
+						$.each(child.children, function(index, child){
+							additional.push(child);
+						});
 					} else {
 						videos.push(child);
 					}
@@ -157,7 +159,9 @@ $(document).ready(function() {
 				editors.push(element.name)
 			} else {
 				$.each(element.children, function(index, child){
-					editorImages[child.name] = child.icon;
+					if(child.type == "file"){
+						editorImages[child.name] = child.icon;
+					}
 				});
 			}
 		});
