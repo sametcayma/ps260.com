@@ -5,9 +5,9 @@ $(document).ready(function() {
 
 	var editors = new Array(); //[index, "name"]
 
-	var editorVideos = new Object();//{"name", [index, video-json]]}
-	var editorAdditionalVideos = new Object();//{"name", [index, video-json]]}
-	var editorImages = new Object(); //{"name", "url"}
+	var editorVideos = new Object();//{"editor_name", [index, video-json]]}
+	var editorAdditionalVideos = new Object();//{"editor_name", {"folder_name", [index, video-json]}]}
+	var editorImages = new Object(); //{"editor_name", "url"}
 
 	var splashHidden = false;
 	var isMobile = false;
@@ -142,20 +142,23 @@ $(document).ready(function() {
 		$.each(json.children, function(index, element){
 			if(element.name != "Key Images"){
 				var videos = new Array();
-				var additional = new Array();
+				var folders = new Object();
 				$.each(element.children, function(index, child){
-					if(child.type == "directory" && child.name.toLowerCase() == "additional"){
-						$.each(child.children, function(index, child){
-							additional.push(child);
+					if(child.type == "directory"){
+						var folderVideos = new Array();
+						$.each(child.children, function(index, subchild){
+							folderVideos.push(subchild);
 						});
+
+						folders[child.name] = folderVideos;
+
 					} else {
 						videos.push(child);
 					}
 				});
 
 				editorVideos[element.name] = videos;
-				editorAdditionalVideos[element.name] = additional;
-
+				editorAdditionalVideos[element.name] = folders;
 				editors.push(element.name)
 			} else {
 				$.each(element.children, function(index, child){
@@ -241,18 +244,21 @@ $(document).ready(function() {
 			parseVideoJson(json, $videoContainer);
 		});
 
-		var additionalVideos = editorAdditionalVideos[editor];
-		if(additionalVideos.length > 0){
-			var randomIndex = Math.round((additionalVideos.length - 1) * Math.random());
-			var random = additionalVideos[randomIndex];
+		var folders = editorAdditionalVideos[editor];
+		for (var name in folders) {
+			var videoArray = folders[name];
+	
+			var randomIndex = Math.round((videoArray.length - 1) * Math.random());
+			var randomJson = videoArray[randomIndex];
 
-			$videoContainer.append(createVideoElement(random.icon, "Additional Videos", "", "", function(e){
+			$videoContainer.append(createVideoElement(randomJson.icon, name, "", "", function(e){
 				e.preventDefault();
 
+				var thumbIndex = $(this).index() - 1;
 				$(this).remove();
 
-				$.each(editorAdditionalVideos[editor], function(index, json){ 
-					parseVideoJson(json, $videoContainer);
+				$.each(editorAdditionalVideos[editor][name], function(index, json){ 
+					parseVideoJson(json, $videoContainer, thumbIndex);
 				});
 			}));
 		}
@@ -266,7 +272,7 @@ $(document).ready(function() {
 		$("#videos").fadeIn();
 	}
 
-	function parseVideoJson(json, container){
+	function parseVideoJson(json, container, atIndex){
 		var jsonName = json.name.split("\"");
 
 		var brand = jsonName[0];
@@ -290,7 +296,7 @@ $(document).ready(function() {
 			directorEle = '<p class="director">' + director + '</p>';
 		}
 
-		container.append(createVideoElement(json.icon, brand, titleEle, directorEle, function(e){
+		var videoElement = createVideoElement(json.icon, brand, titleEle, directorEle, function(e){
 			e.preventDefault();
 
 			$(this).removeClass("grayscale");
@@ -299,7 +305,13 @@ $(document).ready(function() {
 
 			$(this).addClass("selected");
 			handleVideoClick(json);
-		}));
+		});
+
+		if(atIndex != null){
+			$(container.children()[atIndex]).after(videoElement);
+		} else {
+			container.append(videoElement);
+		}
 	}
 
 	function createVideoElement(icon, brand, titleEle, directorEle, onClick){
