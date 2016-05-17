@@ -10,7 +10,7 @@ $(document).ready(function() {
 	var editorImages = new Object(); //{"editor_name", "url"}
 
 	var splashHidden = false;
-	var isMobile = false;
+	var isMobile = true;
 	var mobileWidth = 680; //Note: This number must match SCSS $phone-break-point
 	var mobileMenuIsOpen = false;
 
@@ -43,6 +43,7 @@ $(document).ready(function() {
 		});
 	});
 	
+	//MOBILE TWEAKS
 	if(isMobile){
 		splashHidden = true;
 		$("#splash").hide();
@@ -69,11 +70,21 @@ $(document).ready(function() {
 
 	$(window).resize();
 
+	//PHONE LINKS
+	if(isMobile){
+		$(".number").each(function(){
+			var number = $(this).text();
+			var html = 
+
+			$(this).html('<a href="tel:+1' + number.replace(/\s/g, "") + '">' + number + '</a>');
+		});
+	}
+
 	//VIDEO JS
 	var vjs = videojs("video-player", 
 		{ 
 			fluid: true,
-			autoplay: false
+			autoplay: !isMobile
 		}
 	);
 
