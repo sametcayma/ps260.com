@@ -10,7 +10,7 @@ $(document).ready(function() {
 	var editorImages = new Object(); //{"editor_name", "url"}
 
 	var splashHidden = false;
-	var isMobile = true;
+	var isMobile = false;
 	var mobileWidth = 680; //Note: This number must match SCSS $phone-break-point
 	var mobileMenuIsOpen = false;
 
