@@ -74,7 +74,6 @@ $(document).ready(function() {
 	if(isMobile){
 		$(".number").each(function(){
 			var number = $(this).text();
-			var html = 
 
 			$(this).html('<a href="tel:+1' + number.replace(/\s/g, "") + '">' + number + '</a>');
 		});
