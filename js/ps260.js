@@ -16,6 +16,14 @@ $(document).ready(function() {
 
 	var scrollDuration = 800;
 
+	//SURVEY
+	//Set the preceeding <p> as the name of the input
+	$('#survey form div').each(function(){
+		$question = $(this).find('p').text();
+		$input = $(this).find('input');
+		$input.attr('name', encodeURIComponent($question));
+	});
+
 	//FONT
 	try {
 		Typekit.load({ async: true });
@@ -81,9 +89,9 @@ $(document).ready(function() {
 
 	//VIDEO JS
 	var vjs = videojs("video-player", 
-		{ 
-			fluid: true,
-			autoplay: !isMobile
+		{
+			autoplay: false,
+			preload: false	
 		}
 	);
 
@@ -104,26 +112,74 @@ $(document).ready(function() {
 	$("#mobile-nav-wrapper li a").each(function(index, element){
 		$(element).click(function(e){
 			e.preventDefault();
+
+			setTimeout(function(){
+				$("#menu-button").click();
+			}, 300);
+
 			var anchor = $(this).attr("href");
-			$(window).scrollTo($("body").find(anchor), scrollDuration, 
-				{ 
-					offset: { top: -20, left: 0 },
-					easing:'easeInOutQuart'
-				}
-			);
+			if(anchor == "#survey"){
+				var $overlay = $('#overlay');
+				var $survey = $('#survey');
+
+				$overlay.show();
+				$survey.show();
+
+				$overlay.stop().transition({"opacity" : 1 });
+				$survey.stop().transition({"opacity" : 1 }, function(){});
+
+				$overlay.click(function(e){
+					e.preventDefault();
+					$survey.css({"opacity" : 0});
+					$survey.hide();
+
+					$overlay.stop().transition({"opacity" : 0 }, function(){
+						$overlay.hide();
+						$overlay.css({"opacity" : 0});
+					});
+				});
+			} else {
+				$(window).scrollTo($("body").find(anchor), scrollDuration, 
+					{ 
+						offset: { top: -20, left: 0 },
+					}
+				);		
+			}
 		});
 	});
 
 	$(".nav-wrapper a").each(function(index, element){
 		$(element).click(function(e){
 			e.preventDefault();
+
 			var anchor = $(this).attr("href");
-			$(window).scrollTo($("body").find(anchor), scrollDuration, 
-				{ 
-					offset: { top: -20, left: 0 },
-					easing:'easeInOutQuart'
-				}
-			);		
+			if(anchor == "#survey"){
+				var $overlay = $('#overlay');
+				var $survey = $('#survey');
+
+				$overlay.show();
+				$survey.show();
+
+				$overlay.stop().transition({"opacity" : 1 });
+				$survey.stop().transition({"opacity" : 1 });
+
+				$overlay.click(function(e){
+					e.preventDefault();
+					$survey.css({"opacity" : 0});
+					$survey.hide();
+
+					$overlay.stop().transition({"opacity" : 0 }, function(){
+						$overlay.hide();
+						$overlay.css({"opacity" : 0});
+					});
+				});
+			} else {
+				$(window).scrollTo($("body").find(anchor), scrollDuration, 
+					{ 
+						offset: { top: -20, left: 0 },
+					}
+				);		
+			}
 		});
 	});
 

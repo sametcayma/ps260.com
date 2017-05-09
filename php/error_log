@@ -1,0 +1,8 @@
+[23-Apr-2017 17:37:57] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/pstwosix/public_html/survey/php/survey.php on line 5
+[23-Apr-2017 17:38:13] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/pstwosix/public_html/survey/php/survey.php on line 5
+[23-Apr-2017 17:46:30] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/pstwosix/public_html/survey/php/survey.php on line 5
+[23-Apr-2017 17:46:41] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/pstwosix/public_html/survey/php/survey.php on line 5
+[23-Apr-2017 17:47:16] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/pstwosix/public_html/survey/php/survey.php on line 5
+[23-Apr-2017 17:54:20] PHP Parse error:  syntax error, unexpected T_FOREACH in /home1/pstwosix/public_html/survey/php/survey.php on line 6
+[23-Apr-2017 18:24:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/pstwosix/public_html/survey/php/survey.php:2) in /home1/pstwosix/public_html/survey/php/survey.php on line 23
+[23-Apr-2017 18:25:34] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/pstwosix/public_html/survey/php/survey.php:3) in /home1/pstwosix/public_html/survey/php/survey.php on line 23
