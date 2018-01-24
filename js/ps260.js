@@ -108,7 +108,6 @@ $(document).ready(function() {
 		mobileMenuIsOpen = !mobileMenuIsOpen;
 	});
 
-	//DESTOP NAVIGATION
 	$("#mobile-nav-wrapper li a").each(function(index, element){
 		$(element).click(function(e){
 			e.preventDefault();
@@ -120,18 +119,19 @@ $(document).ready(function() {
 			var anchor = $(this).attr("href");
 			if(anchor == "#survey"){
 				var $overlay = $('#overlay');
-				var $survey = $('#survey');
+				var $surveyBackground = $('#survey-background');
+				var $surveyWrapper = $('#survey-wrapper');
 
 				$overlay.show();
-				$survey.show();
+				$surveyWrapper.show();
 
 				$overlay.stop().transition({"opacity" : 1 });
-				$survey.stop().transition({"opacity" : 1 }, function(){});
+				$surveyWrapper.stop().transition({"opacity" : 1 }, function(){});
 
-				$overlay.click(function(e){
+				$surveyBackground.click(function(e){
 					e.preventDefault();
-					$survey.css({"opacity" : 0});
-					$survey.hide();
+					$surveyWrapper.css({"opacity" : 0});
+					$surveyWrapper.hide();
 
 					$overlay.stop().transition({"opacity" : 0 }, function(){
 						$overlay.hide();
@@ -148,6 +148,7 @@ $(document).ready(function() {
 		});
 	});
 
+	//DESTOP NAVIGATION
 	$(".nav-wrapper a").each(function(index, element){
 		$(element).click(function(e){
 			e.preventDefault();
@@ -155,18 +156,19 @@ $(document).ready(function() {
 			var anchor = $(this).attr("href");
 			if(anchor == "#survey"){
 				var $overlay = $('#overlay');
-				var $survey = $('#survey');
+				var $surveyBackground = $('#survey-background');
+				var $surveyWrapper = $('#survey-wrapper');
 
 				$overlay.show();
-				$survey.show();
+				$surveyWrapper.show();
 
 				$overlay.stop().transition({"opacity" : 1 });
-				$survey.stop().transition({"opacity" : 1 });
+				$surveyWrapper.stop().transition({"opacity" : 1 }, function(){});
 
-				$overlay.click(function(e){
+				$surveyBackground.click(function(e){
 					e.preventDefault();
-					$survey.css({"opacity" : 0});
-					$survey.hide();
+					$surveyWrapper.css({"opacity" : 0});
+					$surveyWrapper.hide();
 
 					$overlay.stop().transition({"opacity" : 0 }, function(){
 						$overlay.hide();

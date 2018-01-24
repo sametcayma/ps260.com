@@ -2,9 +2,9 @@
 	if(isset($_POST["submit"])){		
 		$headers = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-		$headers .= "From: survey <survey@ps260.com>" . "\r\n";
+		//$headers .= "From: survey <survey@ps260.com>" . "\r\n";
 
-		$to_email = "erin@ps260, natalie@ps260.com, jonathan@ps260.com";
+		$to_email = "jlakser49@gmail.com";
 		$subject = "[ps260.com] New Survey Submitted!";
 
 		$message = "<html><head></head><body>";
